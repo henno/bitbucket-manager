@@ -1045,8 +1045,8 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                       <tr class="\${row['workspaceStripe']}">
                         \${row['showWorkspace'] ? \`<td rowspan="\${row['workspaceSpan']}" class="workspace-name">
                           <span class="workspace-badge-settings"><span class="workspace-name-part">\${row['workspace']}</span><a href="https://bitbucket.org/\${row['workspaceSlug']}/workspace/settings/user-directory" target="_blank" class="bitbucket-logo-part" title="Open workspace settings">
-                            <svg class="bitbucket-logo" viewBox="0 0 24 24">
-                              <path d="M.778 1.213a.768.768 0 00-.768.892l3.263 19.81c.084.5.515.868 1.022.873H19.26a.772.772 0 00.77-.646l3.27-20.03a.772.772 0 00-.768-.892zM14.52 15.53H9.522L8.17 8.466h7.561z"/>
+                            <svg viewBox="3 4 18 16" width="20" height="20" aria-hidden="true">
+                              <path d="M17.898 11.353l-.994 6.064c-.065.367-.324.583-.691.583H7.787c-.367 0-.627-.216-.691-.583L5.346 6.604C5.28 6.237 5.476 6 5.82 6h12.358c.346 0 .54.237.475.604l-.475 2.85c-.065.41-.303.582-.691.582h-7.432c-.109 0-.173.065-.152.194l.584 3.583c.021.086.086.151.172.151h2.68c.086 0 .15-.065.172-.151l.41-2.59c.044-.324.26-.453.563-.453H17.4c.432 0 .562.216.497.582z" fill="currentColor"/>
                             </svg>
                           </a></span>
                           <button class="workspace-refresh" onclick="refreshWorkspace('\${row['workspaceSlug']}')" title="Refresh workspace data">↻</button>
