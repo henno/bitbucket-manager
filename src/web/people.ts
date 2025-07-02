@@ -180,6 +180,48 @@ export function createPeopleRoute(_peopleService: PeopleService) {
             border-bottom-right-radius: 4px;
             margin-left: -1px;
           }
+          .repo-badge.admin .workspace-part-repo {
+            background: #dc3545;
+            color: white;
+          }
+          .repo-badge.admin .repo-part {
+            background: #b02a37;
+            color: white;
+          }
+          .repo-badge.admin:hover .workspace-part-repo {
+            background: #c82333;
+          }
+          .repo-badge.admin:hover .repo-part {
+            background: #a71e2a;
+          }
+          .repo-badge.write .workspace-part-repo {
+            background: #ffc107;
+            color: #212529;
+          }
+          .repo-badge.write .repo-part {
+            background: #e6ac00;
+            color: #212529;
+          }
+          .repo-badge.write:hover .workspace-part-repo {
+            background: #e0a800;
+          }
+          .repo-badge.write:hover .repo-part {
+            background: #d39e00;
+          }
+          .repo-badge.read .workspace-part-repo {
+            background: #28a745;
+            color: white;
+          }
+          .repo-badge.read .repo-part {
+            background: #1e7e34;
+            color: white;
+          }
+          .repo-badge.read:hover .workspace-part-repo {
+            background: #218838;
+          }
+          .repo-badge.read:hover .repo-part {
+            background: #155724;
+          }
         </style>
       </head>
       <body>
@@ -352,7 +394,8 @@ export function createPeopleRoute(_peopleService: PeopleService) {
                       // Show individual repositories
                       if (w.repositories && w.repositories.length > 0) {
                         w.repositories.forEach(repo => {
-                          repositoryEntries.push(\`<a href="https://bitbucket.org/\${w.workspace}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge"><span class="workspace-part-repo">\${w.workspace}</span><span class="repo-part">\${repo.repository}</span></a>\`);
+                          const permissionClass = repo.permission || 'read'; // Default to read if no permission specified
+                          repositoryEntries.push(\`<a href="https://bitbucket.org/\${w.workspace}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge \${permissionClass}"><span class="workspace-part-repo">\${w.workspace}</span><span class="repo-part">\${repo.repository}</span></a>\`);
                         });
                       }
                     });

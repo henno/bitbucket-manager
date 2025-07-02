@@ -153,35 +153,146 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
           }
           .workspace-badge {
             display: inline-block;
-            background: #dc3545;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 4px;
             margin: 2px;
             font-size: 0.875rem;
             font-weight: 500;
             text-decoration: none;
             cursor: pointer;
+            border-radius: 4px;
+            overflow: hidden;
+            white-space: nowrap;
           }
-          .workspace-badge:hover {
+          .workspace-badge:hover .workspace-part {
             background: #c82333;
+          }
+          .workspace-badge:hover .group-part {
+            background: #a71e2a;
+          }
+          .workspace-part {
+            display: inline-block;
+            background: #dc3545;
             color: white;
+            padding: 3px 6px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
+          .group-part {
+            display: inline-block;
+            background: #b02a37;
+            color: white;
+            padding: 3px 6px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            margin-left: -1px;
           }
           .repo-badge {
             display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 3px 8px;
-            border-radius: 4px;
             margin: 2px;
             font-size: 0.875rem;
             font-weight: 500;
             text-decoration: none;
             cursor: pointer;
+            border-radius: 4px;
+            overflow: hidden;
+            white-space: nowrap;
           }
-          .repo-badge:hover {
+          .repo-badge:hover .workspace-part-repo {
             background: #e0a800;
+          }
+          .repo-badge:hover .repo-part {
+            background: #d39e00;
+          }
+          .workspace-part-repo {
+            display: inline-block;
+            background: #ffc107;
             color: #212529;
+            padding: 3px 6px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
+          .repo-part {
+            display: inline-block;
+            background: #e6ac00;
+            color: #212529;
+            padding: 3px 6px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            margin-left: -1px;
+          }
+          .repo-badge.admin .workspace-part-repo {
+            background: #dc3545;
+            color: white;
+          }
+          .repo-badge.admin .repo-part {
+            background: #b02a37;
+            color: white;
+          }
+          .repo-badge.admin:hover .workspace-part-repo {
+            background: #c82333;
+          }
+          .repo-badge.admin:hover .repo-part {
+            background: #a71e2a;
+          }
+          .repo-badge.write .workspace-part-repo {
+            background: #ffc107;
+            color: #212529;
+          }
+          .repo-badge.write .repo-part {
+            background: #e6ac00;
+            color: #212529;
+          }
+          .repo-badge.write:hover .workspace-part-repo {
+            background: #e0a800;
+          }
+          .repo-badge.write:hover .repo-part {
+            background: #d39e00;
+          }
+          .repo-badge.read .workspace-part-repo {
+            background: #28a745;
+            color: white;
+          }
+          .repo-badge.read .repo-part {
+            background: #1e7e34;
+            color: white;
+          }
+          .repo-badge.read:hover .workspace-part-repo {
+            background: #218838;
+          }
+          .repo-badge.read:hover .repo-part {
+            background: #155724;
+          }
+          .project-badge {
+            display: inline-block;
+            background: #6f42c1;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin: 2px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            white-space: nowrap;
+          }
+          .project-badge:hover {
+            background: #5a2d91;
+          }
+          .direct-badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin: 2px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            white-space: nowrap;
+          }
+          .direct-badge:hover {
+            background: #1e7e34;
+          }
+          .no-access {
+            color: #6c757d;
+            font-style: italic;
+            font-size: 0.875rem;
           }
         </style>
       </head>
@@ -334,31 +445,79 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                 const sortedMembers = workspace.people.sort((a, b) => a.name.localeCompare(b.name));
                 
                 sortedMembers.forEach(memberData => {
+                  let memberHasAnyRows = false;
+                  
                   if (memberData.groups.length > 0) {
                     // Create separate row for each group
                     memberData.groups.forEach(group => {
-                      // Get unique repositories for this group
-                      const uniqueRepos = [...new Set(memberData.repositories.map(repo => repo.repository))];
-                      const groupRepos = uniqueRepos.map(repoName => ({ repository: repoName }));
+                      // Get repositories that this person accesses through THIS SPECIFIC GROUP
+                      const groupRepos = memberData.repositories.filter(repo => 
+                        repo.access_type === 'GROUP' && repo.group === group
+                      );
                       
+                      if (groupRepos.length > 0) {
+                        tableRows.push({
+                          workspace: workspace.name,
+                          workspaceSlug: workspace.slug,
+                          person: memberData.name,
+                          access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge"><span class="workspace-part">\${workspace.slug}</span><span class="group-part">\${group}</span></a>\`,
+                          repositories: groupRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' ')
+                        });
+                        memberHasAnyRows = true;
+                      }
+                    });
+                  }
+                  
+                  // Add PROJECT-level access
+                  const projectRepos = memberData.repositories.filter(repo => 
+                    repo.access_type === 'PROJECT'
+                  );
+                  if (projectRepos.length > 0) {
+                    tableRows.push({
+                      workspace: workspace.name,
+                      workspaceSlug: workspace.slug,
+                      person: memberData.name,
+                      access: \`<span class="project-badge">PROJECT</span>\`,
+                      repositories: projectRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' ')
+                    });
+                    memberHasAnyRows = true;
+                  }
+                  
+                  // Handle direct repository access
+                  const directRepos = memberData.repositories.filter(repo => 
+                    repo.access_type === 'DIRECT'
+                  );
+                  if (directRepos.length > 0) {
+                    tableRows.push({
+                      workspace: workspace.name,
+                      workspaceSlug: workspace.slug,
+                      person: memberData.name,
+                      access: \`<span class="direct-badge">DIRECT</span>\`,
+                      repositories: directRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' ')
+                    });
+                    memberHasAnyRows = true;
+                  }
+                  
+                  // If member has no repository access at all, still show them with their groups
+                  if (!memberHasAnyRows && memberData.groups.length > 0) {
+                    // Show first group (or all groups) even if they provide no repository access
+                    memberData.groups.forEach(group => {
                       tableRows.push({
                         workspace: workspace.name,
                         workspaceSlug: workspace.slug,
                         person: memberData.name,
-                        access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge">\${group}</a>\`,
-                        repositories: groupRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge">\${repo.repository}</a>\`).join(' ')
+                        access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge"><span class="workspace-part">\${workspace.slug}</span><span class="group-part">\${group}</span></a>\`,
+                        repositories: '' // No repositories
                       });
                     });
-                  } else {
-                    // Create separate row for each direct repository access
-                    memberData.repositories.forEach(repo => {
-                      tableRows.push({
-                        workspace: workspace.name,
-                        workspaceSlug: workspace.slug,
-                        person: memberData.name,
-                        access: '',
-                        repositories: \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge">\${repo.repository}</a>\`
-                      });
+                  } else if (!memberHasAnyRows) {
+                    // Member has no groups and no repository access - still show them
+                    tableRows.push({
+                      workspace: workspace.name,
+                      workspaceSlug: workspace.slug,
+                      person: memberData.name,
+                      access: \`<span class="no-access">No access</span>\`,
+                      repositories: '' // No repositories
                     });
                   }
                 });

@@ -1,0 +1,1021 @@
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace klaabu: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/klaabu?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Could not fetch repositories for workspace kuulutus24: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/kuulutus24?pagelen=100
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/groups
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for kinnistu/kinnistu: warn: HTTP 403: Forbidden for https://api.bitbucket.org/1.0/groups/kinnistu/administrators/members
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get group permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/groups
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for aigarsander/aastategija: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/aigarsander/aastategija/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api_blog: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/andreiredi/api_blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for andreiredi/api-blog: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/andreiredi/api-blog/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/i396: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/anroots/i396/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for anroots/pennipress-ee: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/anroots/pennipress-ee/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-firebase: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/dalosa/vue-firebase/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for dalosa/vue-saul-todo: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/dalosa/vue-saul-todo/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/mycoolrepository: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/mycoolrepository/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for hentsh/sportstore: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/hentsh/sportstore/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for ignaciosemperesantonja/queue-sample-ignacio: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/ignaciosemperesantonja/queue-sample-ignacio/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for mhpreiman/mastiit: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/mhpreiman/mastiit/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/kirjandusmuuseum: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sightteam/kirjandusmuuseum/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sightteam/sight: warn: HTTP 404: Not Found for https://api.bitbucket.org/2.0/repositories/sightteam/sight/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for sliwkacz/ticketvalidator: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/sliwkacz/ticketvalidator/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
+Failed to get user permissions for TanelIsmael/graphql: warn: HTTP 403: Forbidden for https://api.bitbucket.org/2.0/repositories/TanelIsmael/graphql/permissions-config/users
