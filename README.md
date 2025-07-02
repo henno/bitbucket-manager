@@ -1,6 +1,16 @@
-# Bitbucket People Manager
+# Bitbucket People Manager - your single pane of glass for repo access
 
-A REST API and web interface for managing Bitbucket repository access across all workspaces where you have admin privileges. Built with Bun runtime and TypeScript.
+Keeping Bitbucket tidy shouldn’t feel like spelunking through nested **repos → projects → groups**. Yet every time a teammate left, you had to play hide-and-seek with phantom permissions, hitting seat limits you *swore* were impossible.
+
+**Bitbucket Permission Manager** flips that script:
+
+* **One dashboard, total visibility** – every workspace, repo, project and group laid out in a flat, searchable table.
+* **Instant audits** – see *who* can do *what* (and *why*) in seconds.
+* **One-click clean-ups** – boot ex-employees or reassign roles without hunting through Bitbucket’s UI.
+* **Seat-saver** – reclaim paid user slots before they drain your budget.
+
+Stop guessing, start managing. Spin it up, connect your workspaces, and take back control of your Bitbucket permissions—100 % oversight, zero hassle.
+
 
 ## Features
 
@@ -10,6 +20,7 @@ A REST API and web interface for managing Bitbucket repository access across all
 - **Visual Interface**: Color-coded badges for workspace vs repository access
 - **Persistent Caching**: SQLite-based caching for improved performance
 - **Authentication**: Session-based login system
+- **Hide Myself**: Option to hide yourself from tables for cleaner views
 
 ## Prerequisites
 
@@ -19,99 +30,39 @@ A REST API and web interface for managing Bitbucket repository access across all
 
 ## Setup
 
-1. **Clone and install dependencies**:
-   ```bash
-   git clone <repository-url>
-   cd bb2
-   bun install
-   ```
-
-2. **Create environment file**:
-   ```bash
-   cp .env.example .env
-   ```
-
-3. **Configure environment variables** in `.env`:
-   ```env
-   BITBUCKET_USER=your-bitbucket-username
-   BITBUCKET_TOKEN=your-app-password
-   APP_USER=admin
-   APP_PASS=your-hashed-password
-   PORT=3000
-   ```
-
-4. **Generate Bitbucket App Password**:
+1. **Generate Bitbucket App Password or API token**:
    - Go to [Bitbucket Settings > App passwords](https://bitbucket.org/account/settings/app-passwords/)
    - Create new app password with these permissions:
-     - Account: Read
-     - Workspace membership: Read
-     - Projects: Read
-     - Repositories: Read, Admin
-   - Copy the generated password to `BITBUCKET_TOKEN`
+      - Account: Read
+      - Workspace membership: Read, Admin
+      - Projects: Read, Admin
+      - Repositories: Read, Admin
 
-5. **Generate APP_PASS hash**:
+2. **Run the interactive setup script**:
    ```bash
-   # Run this command to generate a SHA256 hash for your password
-   echo -n "your-password" | openssl dgst -sha256
+   bun setup
    ```
-   Copy the hash (without the "SHA256(stdin)= " prefix) to `APP_PASS` in your `.env` file.
+   
+   This will guide you through the configuration process:
+   - Setting up Bitbucket credentials
+   - Creating app login credentials
+   - Configuring port settings
+   - Enabling the "hide myself" feature (automatically fetches your UUID)
 
-6. **Start the server**:
+3. **Start the server**:
    ```bash
-   bun run src/index.ts
+   bun start # production mode: builds plain js file (dist/index.js) and runs that 
+   bun dev  # development mode: watches changes and reloads automatically
    ```
 
 ## Usage
 
 ### Web Interface
 
-Navigate to `http://localhost:3000` in your browser:
+Navigate to `http://localhost:3000` in your browser (or whatever port you set):
 
-- **Home** (`/`): API documentation and links
 - **People** (`/people`): Table view of all users and their access
 - **Workspaces** (`/workspaces`): Table view organized by workspace
-
-### Authentication
-
-1. Click on any protected page (People or Workspaces)
-2. Login with your configured `APP_USER` and password
-3. Session will be maintained across browser tabs
-
-### API Endpoints
-
-All API endpoints require authentication via `Authorization: Bearer <sessionId>` header.
-
-- `POST /api/sessions` - Login and get session ID
-- `GET /api/people` - Get all people with repository access
-- `GET /api/workspaces` - Get all workspaces
-- `GET /health` - Health check (no auth required)
-
-### Query Parameters
-
-- `maxAge`: Cache max age in seconds (default: 3600)
-- `includeDirectAccess`: Include cross-workspace direct access detection (default: false)
-
-## Badge System
-
-- **Red badges**: Workspace access (via groups) - links to user directory
-- **Yellow badges**: Direct repository access - links to repository permissions
-
-## Architecture
-
-- **Bun**: Runtime and package manager
-- **Hono**: Web framework
-- **SQLite**: Persistent caching and session storage
-- **TypeScript**: Type safety
-- **Bitbucket API**: v1.0 and v2.0 endpoints
-
-## Development
-
-```bash
-# Start development server
-bun run src/index.ts
-
-# The server will restart automatically on file changes
-```
 
 ## Cache Management
 
@@ -125,4 +76,4 @@ The application uses SQLite for persistent caching:
 1. **Authentication fails**: Verify your Bitbucket app password has correct permissions
 2. **No workspaces found**: Ensure you have admin access to at least one workspace
 3. **Database errors**: Delete `database.sqlite` to reset cache
-4. **Login issues**: Regenerate your `APP_PASS` hash using the command above
+4. **Login issues**: Regenerate your `APP_PASS` hash using `bun setup`

@@ -162,15 +162,15 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             overflow: hidden;
             white-space: nowrap;
           }
-          .workspace-badge:hover .workspace-part {
-            background: #c82333;
+          .workspace-badge:hover .group-workspace-part {
+            background: #004085;
           }
           .workspace-badge:hover .group-part {
-            background: #a71e2a;
+            background: #003266;
           }
-          .workspace-part {
+          .group-workspace-part {
             display: inline-block;
-            background: #dc3545;
+            background: #007bff;
             color: white;
             padding: 3px 6px;
             border-top-left-radius: 4px;
@@ -178,7 +178,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
           }
           .group-part {
             display: inline-block;
-            background: #b02a37;
+            background: #0056b3;
             color: white;
             padding: 3px 6px;
             border-top-right-radius: 4px;
@@ -263,31 +263,71 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
           }
           .project-badge {
             display: inline-block;
-            background: #6f42c1;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 4px;
             margin: 2px;
             font-size: 0.875rem;
             font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 4px;
+            overflow: hidden;
             white-space: nowrap;
           }
-          .project-badge:hover {
+          .project-badge:hover .project-workspace-part {
             background: #5a2d91;
+          }
+          .project-badge:hover .project-key-part {
+            background: #4c2678;
+          }
+          .project-workspace-part {
+            display: inline-block;
+            background: #6f42c1;
+            color: white;
+            padding: 3px 6px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
+          .project-key-part {
+            display: inline-block;
+            background: #5a2d91;
+            color: white;
+            padding: 3px 6px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            margin-left: -1px;
           }
           .direct-badge {
             display: inline-block;
-            background: #28a745;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 4px;
             margin: 2px;
             font-size: 0.875rem;
             font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 4px;
+            overflow: hidden;
             white-space: nowrap;
           }
-          .direct-badge:hover {
-            background: #1e7e34;
+          .direct-badge:hover .direct-repo-part {
+            background: #17a2b8;
+          }
+          .direct-badge:hover .direct-name-part {
+            background: #138496;
+          }
+          .direct-repo-part {
+            display: inline-block;
+            background: #20c997;
+            color: white;
+            padding: 3px 6px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
+          .direct-name-part {
+            display: inline-block;
+            background: #17a2b8;
+            color: white;
+            padding: 3px 6px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            margin-left: -1px;
           }
           .no-access {
             color: #6c757d;
@@ -306,14 +346,14 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             white-space: nowrap;
           }
           .person-badge:hover .person-name-part {
-            background: #c82333;
+            background: #5a6268;
           }
           .person-badge:hover .person-remove-x {
-            background: #a71e2a;
+            background: #4e555b;
           }
           .person-name-part {
             display: inline-block;
-            background: #dc3545;
+            background: #6c757d;
             color: white;
             padding: 3px 6px;
             border-top-left-radius: 4px;
@@ -321,7 +361,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
           }
           .person-remove-x {
             display: inline-block;
-            background: #b02a37;
+            background: #5a6268;
             color: white;
             padding: 3px 6px;
             border-top-right-radius: 4px;
@@ -435,7 +475,6 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
         <!-- Main Content (shown when authenticated) -->
         <div id="mainContent" class="container hidden">
           <div class="nav-links">
-            <a href="/">Home</a>
             <a href="/people">People</a>
             <a href="/workspaces">Workspaces</a>
           </div>
@@ -585,7 +624,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                           workspaceSlug: workspace.slug,
                           person: memberData.name,
                           personUuid: memberData.uuid,
-                          access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge"><span class="workspace-part">\${workspace.slug}</span><span class="group-part">\${group}</span></a>\`,
+                          access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge"><span class="group-workspace-part">group</span><span class="group-part">\${group}</span></a>\`,
                           repositories: groupRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' '),
                           removeTarget: {
                             groups: [group]
@@ -617,7 +656,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                         workspaceSlug: workspace.slug,
                         person: memberData.name,
                         personUuid: memberData.uuid,
-                        access: \`<span class="project-badge">PROJECT: \${projectKey}</span>\`,
+                        access: \`<span class="project-badge"><span class="project-workspace-part">project</span><span class="project-key-part">\${projectKey}</span></span>\`,
                         repositories: repos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' '),
                         removeTarget: {
                           projects: [projectKey]
@@ -626,9 +665,9 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                     });
                     memberHasAnyRows = true;
                   }
-                  
+
                   // Handle direct repository access
-                  const directRepos = memberData.repositories.filter(repo => 
+                  const directRepos = memberData.repositories.filter(repo =>
                     repo.access_type === 'DIRECT'
                   );
                   if (directRepos.length > 0) {
@@ -637,7 +676,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                       workspaceSlug: workspace.slug,
                       person: memberData.name,
                       personUuid: memberData.uuid,
-                      access: \`<span class="direct-badge">DIRECT</span>\`,
+                      access: directRepos.map(repo => \`<span class="direct-badge"><span class="direct-repo-part">repo</span><span class="direct-name-part">\${repo.repository}</span></span>\`).join(' '),
                       repositories: directRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' '),
                       removeTarget: {
                         repositories: directRepos.map(repo => repo.repository)
@@ -645,7 +684,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                     });
                     memberHasAnyRows = true;
                   }
-                  
+
                   // If member has no repository access at all, still show them with their groups
                   if (!memberHasAnyRows && memberData.groups.length > 0) {
                     // Show first group (or all groups) even if they provide no repository access
@@ -655,7 +694,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                         workspaceSlug: workspace.slug,
                         person: memberData.name,
                         personUuid: memberData.uuid,
-                        access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge"><span class="workspace-part">\${workspace.slug}</span><span class="group-part">\${group}</span></a>\`,
+                        access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge"><span class="group-workspace-part">group</span><span class="group-part">\${group}</span></a>\`,
                         repositories: '', // No repositories
                         removeTarget: {
                           groups: [group]

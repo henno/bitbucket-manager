@@ -53,7 +53,3 @@ export interface BitbucketUserPermission {
   permission: string;
 }
 
-export interface BitbucketProjectPermission {
-  user: BitbucketUser;
-  permission: string;
-}

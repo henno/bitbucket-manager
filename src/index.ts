@@ -13,7 +13,9 @@ console.log('Environment check:', {
   BITBUCKET_USER: !!username,
   BITBUCKET_TOKEN: !!token,
   APP_USER: !!process.env.APP_USER,
-  APP_PASS: !!process.env.APP_PASS
+  APP_PASS: !!process.env.APP_PASS,
+  HIDE_MYSELF: process.env.HIDE_MYSELF,
+  HIDE_MYSELF_UUID: process.env.HIDE_MYSELF_UUID
 });
 
 if (!username || !token) {

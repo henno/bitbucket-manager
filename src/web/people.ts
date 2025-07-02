@@ -251,7 +251,6 @@ export function createPeopleRoute(_peopleService: PeopleService) {
         <!-- Main Content (shown when authenticated) -->
         <div id="mainContent" class="container hidden">
           <div class="nav-links">
-            <a href="/">Home</a>
             <a href="/people">People</a>
             <a href="/workspaces">Workspaces</a>
           </div>

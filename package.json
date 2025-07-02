@@ -6,7 +6,8 @@
   "scripts": {
     "start": "bun install && bun run build && bun dist/index.js",
     "dev": "bun install && bun --watch src/index.ts",
-    "build": "bun install && bun build src/index.ts --outdir=dist --target=bun"
+    "build": "bun install && bun build src/index.ts --outdir=dist --target=bun",
+    "setup": "bun run src/scripts/setup.ts"
   },
   "dependencies": {
     "hono": "^4.6.8"
