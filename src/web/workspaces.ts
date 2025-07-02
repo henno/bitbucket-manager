@@ -16,15 +16,54 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
           body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             max-width: 1200px;
+            min-width: 768px;
             margin: 0 auto;
             padding: 20px;
             background: #f5f5f5;
           }
           .container { 
             background: white;
-            padding: 30px;
+            padding: 0;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          }
+          .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+          }
+          .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+          }
+          .header h1 {
+            margin: 0 0 15px 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+          }
+          .header p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+          }
+          .content-body {
+            padding: 30px;
           }
           .login-form {
             max-width: 400px;
@@ -76,21 +115,31 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
           .hidden {
             display: none;
           }
+          .table-container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+          }
           table {
             width: 100%;
+            max-width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
             border: 1px solid #adb5bd;
+            border-radius: 4px;
           }
           th, td {
             padding: 12px;
             text-align: left;
             border-bottom: 1px solid #adb5bd;
             border-right: 1px solid #adb5bd;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
           }
           th:last-child, td:last-child {
             border-right: none;
           }
+          
           .workspace-name {
             font-weight: bold;
             position: relative;
@@ -139,17 +188,6 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
           .repos-count {
             color: #28a745;
             font-weight: 500;
-          }
-          .nav-links {
-            margin-bottom: 20px;
-          }
-          .nav-links a {
-            color: #007bff;
-            text-decoration: none;
-            margin-right: 20px;
-          }
-          .nav-links a:hover {
-            text-decoration: underline;
           }
           .workspace-badge {
             display: inline-block;
@@ -446,6 +484,156 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
           .toast.error {
             background: #dc3545;
           }
+          
+          
+          /* Smooth scaling from 1080px down to 850px */
+          @media (max-width: 1080px) {
+            body {
+              min-width: unset;
+            }
+            
+            /* Calculate scale based on viewport width */
+            .table-container {
+              font-size: calc(0.875rem + (100vw - 850px) * 0.000543);
+              /* At 1080px: 0.875rem + 230 * 0.000543 ≈ 1rem (close to normal) */
+              /* At 850px: 0.875rem + 0 = 0.875rem (smaller) */
+            }
+            
+            table {
+              font-size: inherit;
+            }
+            
+            th, td {
+              padding: calc(6px + (100vw - 850px) * 0.02609);
+              /* At 1080px: 6px + 230 * 0.02609 ≈ 12px (normal padding) */
+              /* At 850px: 6px + 0 = 6px (smaller padding) */
+            }
+            
+            .workspace-badge, .project-badge, .repo-badge, .direct-badge, .person-badge {
+              font-size: calc(0.65rem + (100vw - 850px) * 0.000978);
+              /* At 1080px: 0.65rem + 230 * 0.000978 ≈ 0.875rem (normal) */
+              /* At 850px: 0.65rem (smaller) */
+              margin: calc(1px + (100vw - 850px) * 0.00435);
+            }
+            
+            .workspace-badge span, .project-badge span, .repo-badge span, .direct-badge span, .person-badge span {
+              padding: calc(2px + (100vw - 850px) * 0.01739);
+              /* At 1080px: 2px + 230 * 0.01739 ≈ 6px (normal) */
+              /* At 850px: 2px (smaller) */
+            }
+            
+            .header h1 {
+              font-size: calc(1.8rem + (100vw - 850px) * 0.003043);
+              /* At 1080px: 1.8rem + 230 * 0.003043 ≈ 2.5rem (normal) */
+              /* At 850px: 1.8rem (smaller) */
+            }
+            
+            .header p {
+              font-size: calc(0.9rem + (100vw - 850px) * 0.001304);
+              /* At 1080px: 0.9rem + 230 * 0.001304 ≈ 1.2rem (normal) */
+              /* At 850px: 0.9rem (smaller) */
+            }
+          }
+          
+          /* Responsive improvements - scale and constrain properly */
+          @media (max-width: 850px) {
+            body {
+              padding: 5px;
+              margin: 0;
+              min-width: unset;
+            }
+            .container {
+              margin: 0;
+              border-radius: 4px;
+            }
+            .header {
+              padding: 20px 10px;
+              border-radius: 4px 4px 0 0;
+            }
+            .header h1 {
+              font-size: 1.5rem;
+            }
+            .header p {
+              font-size: 0.85rem;
+            }
+            .content-body {
+              padding: 8px;
+            }
+            
+            /* Make table fit without scrolling */
+            .table-container {
+              margin-top: 10px;
+              margin-left: 0;
+              margin-right: 0;
+              border-radius: 0;
+            }
+            table {
+              font-size: 0.6rem;
+              border-radius: 0;
+              table-layout: fixed;
+            }
+            th, td {
+              padding: 4px 2px;
+              font-size: 0.6rem;
+            }
+            
+            /* Column widths for mobile */
+            th:nth-child(1), td:nth-child(1) { width: 25%; } /* Workspace */
+            th:nth-child(2), td:nth-child(2) { width: 20%; } /* Person */
+            th:nth-child(3), td:nth-child(3) { width: 30%; } /* Access */
+            th:nth-child(4), td:nth-child(4) { width: 25%; } /* Repositories */
+            
+            /* Abbreviate headers on mobile */
+            th:nth-child(4)::after { content: 'Repos'; }
+            th:nth-child(4) { font-size: 0; }
+            th:nth-child(4)::after { font-size: 0.6rem; }
+            
+            .workspace-refresh {
+              font-size: 8px;
+              padding: 1px;
+              margin-left: 1px;
+              top: 2px;
+              right: 2px;
+            }
+            
+            /* Stack badges vertically to save horizontal space */
+            td:nth-child(3), td:nth-child(4) {
+              white-space: normal;
+            }
+            
+            .workspace-badge, .project-badge, .repo-badge, .direct-badge, .person-badge {
+              font-size: 0.5rem;
+              margin: 1px 0;
+              display: inline-flex; /* Use flexbox to keep parts together */
+              max-width: 100%;
+              white-space: nowrap; /* Keep badge parts together */
+            }
+            
+            .workspace-badge span, .project-badge span, .repo-badge span, .direct-badge span, .person-badge span {
+              padding: 1px 2px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              min-width: 0; /* Allow flex items to shrink */
+            }
+            
+            /* Only truncate workspace names if they're actually too long */
+            .workspace-name {
+              font-size: 0.6rem;
+              padding-right: 15px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            
+            /* Hide "No access" text, just show dash */
+            .no-access {
+              font-size: 0;
+            }
+            .no-access::after {
+              content: '-';
+              font-size: 0.6rem;
+            }
+          }
         </style>
       </head>
       <body>
@@ -474,16 +662,15 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
 
         <!-- Main Content (shown when authenticated) -->
         <div id="mainContent" class="container hidden">
-          <div class="nav-links">
-            <a href="/people">People</a>
-            <a href="/workspaces">Workspaces</a>
+          <div class="header">
+            <h1>Bitbucket People Manager</h1>
+            <p>View people and their access across all Bitbucket workspaces</p>
           </div>
           
-          <h1>Workspace Management</h1>
-          <p>View people and their access across all Bitbucket workspaces</p>
-          
-          <div id="workspacesData">
-            <p>Loading workspaces data...</p>
+          <div class="content-body">
+            <div id="workspacesData">
+              <p>Loading workspaces data...</p>
+            </div>
           </div>
         </div>
 
@@ -782,27 +969,29 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             }
 
             document.getElementById('workspacesData').innerHTML = \`
-              <h3>Workspaces (\${sortedWorkspaces.length} workspaces, \${tableRows.length} access entries)</h3>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Workspace</th>
-                    <th>Person</th>
-                    <th>Access</th>
-                    <th>Repositories</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  \${rowsWithSpans.map((row) => \`
-                    <tr class="\${row['workspaceStripe']}">
-                      \${row['showWorkspace'] ? \`<td rowspan="\${row['workspaceSpan']}" class="workspace-name">\${row['workspace']}<button class="workspace-refresh" onclick="refreshWorkspace('\${row['workspaceSlug']}')" title="Refresh workspace data">↻</button></td>\` : ''}
-                      \${row['showPerson'] ? \`<td rowspan="\${row['personSpan']}"><div class="person-badge"><span class="person-name-part">\${row['person']}</span><span class="person-remove-x" data-remove-target="\${btoa(JSON.stringify(row['removeTarget']))}" data-user-uuid="\${row['personUuid']}" onclick="showRemoveModal('\${row['person']}', '\${row['workspaceSlug']}', 'specific', this)" title="Remove \${row['person']} from this specific access">×</span></div></td>\` : ''}
-                      <td>\${row['access']}</td>
-                      <td>\${row['repositories']}</td>
+              <div class="table-container">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Workspace</th>
+                      <th>Person</th>
+                      <th>Access</th>
+                      <th>Repositories</th>
                     </tr>
-                  \`).join('')}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    \${rowsWithSpans.map((row) => \`
+                      <tr class="\${row['workspaceStripe']}">
+                        \${row['showWorkspace'] ? \`<td rowspan="\${row['workspaceSpan']}" class="workspace-name">\${row['workspace']}<button class="workspace-refresh" onclick="refreshWorkspace('\${row['workspaceSlug']}')" title="Refresh workspace data">↻</button></td>\` : ''}
+                        \${row['showPerson'] ? \`<td rowspan="\${row['personSpan']}"><div class="person-badge"><span class="person-name-part">\${row['person']}</span><span class="person-remove-x" data-remove-target="\${btoa(JSON.stringify(row['removeTarget']))}" data-user-uuid="\${row['personUuid']}" onclick="showRemoveModal('\${row['person']}', '\${row['workspaceSlug']}', 'specific', this)" title="Remove \${row['person']} from this specific access">×</span></div></td>\` : ''}
+                        <td>\${row['access']}</td>
+                        <td>\${row['repositories']}</td>
+                      </tr>
+                    \`).join('')}
+                  </tbody>
+                </table>
+              </div>
+              <sub>\${sortedWorkspaces.length} workspaces | \${tableRows.length} access entries</sub>
             \`;
           }
 
