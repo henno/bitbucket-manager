@@ -8,6 +8,136 @@ export class PeopleService {
     this.client = new BitbucketClient(username, token);
   }
 
+  async getWorkspacePeople(workspaceSlug: string, maxAgeMs: number = 60 * 60 * 1000): Promise<PersonData[]> {
+    console.log(`Fetching people for workspace: ${workspaceSlug}`);
+    
+    const peopleMap = new Map<string, PersonData>();
+    
+    try {
+      // Fetch members and repositories in parallel for the specific workspace
+      const [members, repositories] = await Promise.all([
+        this.client.getAllWorkspaceMembers(workspaceSlug, maxAgeMs),
+        this.client.getWorkspaceRepositories(workspaceSlug, maxAgeMs)
+      ]);
+
+      console.log(`Workspace ${workspaceSlug}: ${members.length} members, ${repositories.length} repos`);
+
+      if (members.length === 0) {
+        console.log(`No members in ${workspaceSlug}, returning empty`);
+        return [];
+      }
+
+      const workspaceResults: { member: any, workspaceData: any }[] = [];
+      const directAccessUsers = new Map<string, any>();
+
+      // First, fetch all repository permissions once (not per member)
+      const reposToProcess = repositories.slice(0, 5);
+      const repositoryPermissions = new Map<string, any[]>();
+      
+      const repoPermissionPromises = reposToProcess.map(async (repo) => {
+        try {
+          const permissions = await this.client.getRepositoryPermissions(
+            workspaceSlug,
+            repo,
+            maxAgeMs
+          );
+          repositoryPermissions.set(repo, permissions);
+          
+          // Collect direct access users while we're at it
+          permissions.forEach((perm: any) => {
+            if (perm.user && !members.find((m: any) => m.uuid === perm.user.uuid)) {
+              directAccessUsers.set(perm.user.uuid, perm.user);
+            }
+          });
+        } catch (error: unknown) {
+          console.error(`Error getting permissions for ${workspaceSlug}/${repo}:`, error instanceof Error ? error.message : error);
+          repositoryPermissions.set(repo, []); // Set empty array for failed repos
+        }
+      });
+
+      await Promise.all(repoPermissionPromises);
+
+      // Now process each member using the cached repository permissions
+      members.forEach((member) => {
+        const workspaceData = {
+          workspace: workspaceSlug,
+          groups: member.groups,
+          repositories: [] as any[]
+        };
+
+        // Check member's access to each repository using cached permissions
+        reposToProcess.forEach((repo) => {
+          const permissions = repositoryPermissions.get(repo) || [];
+          const memberPermission = permissions.find((p: any) => p.user?.uuid === member.uuid);
+          if (memberPermission) {
+            workspaceData.repositories.push({
+              repository: repo,
+              permission: memberPermission.permission
+            });
+          }
+        });
+
+        if (workspaceData.repositories.length > 0) {
+          workspaceResults.push({ member, workspaceData });
+        }
+      });
+
+      // Process workspace members
+      workspaceResults.forEach(({ member, workspaceData }) => {
+        if (!peopleMap.has(member.uuid)) {
+          peopleMap.set(member.uuid, {
+            uuid: member.uuid,
+            display_name: member.display_name,
+            workspaces: []
+          });
+        }
+
+        if (workspaceData.repositories.length > 0) {
+          peopleMap.get(member.uuid)!.workspaces.push(workspaceData);
+        }
+      });
+
+      // Process direct access users using cached permissions
+      const directAccessPromises = Array.from(directAccessUsers.entries()).map(async ([uuid, user]) => {
+        if (!peopleMap.has(uuid)) {
+          peopleMap.set(uuid, {
+            uuid: user.uuid,
+            display_name: user.display_name,
+            workspaces: []
+          });
+        }
+
+        // Use cached repository permissions instead of fetching again
+        const userRepos: any[] = [];
+        reposToProcess.forEach((repo) => {
+          const permissions = repositoryPermissions.get(repo) || [];
+          const userPermission = permissions.find((p: any) => p.user?.uuid === uuid);
+          if (userPermission) {
+            userRepos.push({
+              repository: repo,
+              permission: userPermission.permission
+            });
+          }
+        });
+
+        if (userRepos.length > 0) {
+          peopleMap.get(uuid)!.workspaces.push({
+            workspace: workspaceSlug,
+            groups: [],
+            repositories: userRepos
+          });
+        }
+      });
+
+      await Promise.all(directAccessPromises);
+
+    } catch (error: unknown) {
+      console.error(`Error processing workspace ${workspaceSlug}:`, error instanceof Error ? error.message : error);
+    }
+
+    return Array.from(peopleMap.values());
+  }
+
   async getAllPeople(maxAgeMs: number = 60 * 60 * 1000, includeDirectAccess: boolean = false): Promise<PersonData[]> {
     console.log(`Fetching workspaces... (includeDirectAccess: ${includeDirectAccess})`);
     const workspaces = await this.client.getWorkspacesWithAdminAccess(maxAgeMs);
@@ -38,57 +168,63 @@ export class PeopleService {
         const workspaceResults: { member: any, workspaceData: any }[] = [];
         const directAccessUsers = new Map<string, any>(); // Track users with direct access
 
-        // Process repositories for each member
-        for (const member of members) {
+        // First, fetch all repository permissions once (not per member)
+        const reposToProcess = repositories.slice(0, 5);
+        const repositoryPermissions = new Map<string, any[]>();
+        
+        const repoPermissionPromises = reposToProcess.map(async (repo) => {
+          try {
+            const permissions = await this.client.getRepositoryPermissions(
+              workspace.slug,
+              repo,
+              maxAgeMs
+            );
+            repositoryPermissions.set(repo, permissions);
+            
+            // Collect direct access users while we're at it
+            for (const perm of permissions) {
+              if (perm.type === 'DIRECT' && !members.some(m => m.uuid === perm.user.uuid)) {
+                directAccessUsers.set(perm.user.uuid, {
+                  uuid: perm.user.uuid,
+                  display_name: perm.user.display_name,
+                  groups: [] // No group membership
+                });
+              }
+            }
+          } catch (error: unknown) {
+            const message = error instanceof Error ? error.message : 'Unknown error';
+            console.warn(`Failed to get permissions for ${workspace.slug}/${repo}:`, message);
+            repositoryPermissions.set(repo, []); // Set empty array for failed repos
+          }
+        });
+
+        await Promise.all(repoPermissionPromises);
+
+        // Now process each member using the cached repository permissions
+        members.forEach((member) => {
           const workspaceData = {
             workspace: workspace.slug,
             groups: member.groups,
             repositories: [] as any[]
           };
 
-          // Process first few repos to avoid timeout, but do it in parallel
-          const reposToProcess = repositories.slice(0, 5);
-          const repoPromises = reposToProcess.map(async (repo) => {
-            try {
-              const permissions = await this.client.getRepositoryPermissions(
-                workspace.slug,
-                repo,
-                maxAgeMs
-              );
-
-              // Collect direct access users who aren't group members
-              for (const perm of permissions) {
-                if (perm.type === 'DIRECT' && !members.some(m => m.uuid === perm.user.uuid)) {
-                  directAccessUsers.set(perm.user.uuid, {
-                    uuid: perm.user.uuid,
-                    display_name: perm.user.display_name,
-                    groups: [] // No group membership
-                  });
-                }
-              }
-
-              const userPermissions = permissions.filter(p => p.user.uuid === member.uuid);
-              return userPermissions.map(perm => ({
-                repository: repo,
-                permission: perm.permission,
-                access_type: perm.type,
-                group: perm.group
-              }));
-            } catch (error: unknown) {
-              const message = error instanceof Error ? error.message : 'Unknown error';
-              console.warn(`Failed to get permissions for ${workspace.slug}/${repo}:`, message);
-              return [];
-            }
+          // Check member's access to each repository using cached permissions
+          reposToProcess.forEach((repo) => {
+            const permissions = repositoryPermissions.get(repo) || [];
+            const userPermissions = permissions.filter(p => p.user.uuid === member.uuid);
+            workspaceData.repositories.push(...userPermissions.map(perm => ({
+              repository: repo,
+              permission: perm.permission,
+              access_type: perm.type,
+              group: perm.group
+            })));
           });
 
-          const repoResults = await Promise.all(repoPromises);
-          workspaceData.repositories = repoResults.flat();
-
           workspaceResults.push({ member, workspaceData });
-        }
+        });
 
-        // Process direct access users who aren't group members
-        for (const [uuid, directUser] of directAccessUsers) {
+        // Process direct access users who aren't group members using cached permissions
+        const directAccessPromises = Array.from(directAccessUsers.entries()).map(async ([uuid, directUser]) => {
           console.log(`Found direct-only user: ${directUser.display_name} in ${workspace.slug}`);
 
           const workspaceData = {
@@ -97,34 +233,26 @@ export class PeopleService {
             repositories: [] as any[]
           };
 
-          // Get their repository permissions
-          const repoPromises = repositories.slice(0, 5).map(async (repo) => {
-            try {
-              const permissions = await this.client.getRepositoryPermissions(
-                workspace.slug,
-                repo,
-                maxAgeMs
-              );
-
-              const userPermissions = permissions.filter(p => p.user.uuid === uuid && p.type === 'DIRECT');
-              return userPermissions.map(perm => ({
-                repository: repo,
-                permission: perm.permission,
-                access_type: perm.type,
-                group: perm.group
-              }));
-            } catch (error: unknown) {
-              return [];
-            }
+          // Use cached repository permissions instead of fetching again
+          reposToProcess.forEach((repo) => {
+            const permissions = repositoryPermissions.get(repo) || [];
+            const userPermissions = permissions.filter(p => p.user.uuid === uuid && p.type === 'DIRECT');
+            workspaceData.repositories.push(...userPermissions.map(perm => ({
+              repository: repo,
+              permission: perm.permission,
+              access_type: perm.type,
+              group: perm.group
+            })));
           });
 
-          const repoResults = await Promise.all(repoPromises);
-          workspaceData.repositories = repoResults.flat();
-
           if (workspaceData.repositories.length > 0) {
-            workspaceResults.push({ member: directUser, workspaceData });
+            return { member: directUser, workspaceData };
           }
-        }
+          return null;
+        });
+
+        const directAccessResults = await Promise.all(directAccessPromises);
+        workspaceResults.push(...directAccessResults.filter(result => result !== null));
 
         console.log(`✅ Completed workspace ${workspace.slug}`);
         return workspaceResults;
@@ -154,53 +282,7 @@ export class PeopleService {
     }
 
     if (includeDirectAccess) {
-      console.log(`Checking for direct repository permissions across all workspaces for ${peopleMap.size} people...`);
-
-      for (const [uuid, person] of peopleMap) {
-        console.log(`Checking cross-workspace access for: ${person.display_name} (${uuid})`);
-
-        for (const workspace of workspaces) {
-          // Skip if we already processed this workspace for this person
-          if (person.workspaces.some(w => w.workspace === workspace.slug)) {
-            console.log(`  Skipping ${workspace.slug} (already processed)`);
-            continue;
-          }
-
-          console.log(`  Checking ${workspace.slug}...`);
-          const repositories = await this.client.getWorkspaceRepositories(workspace.slug, maxAgeMs);
-          console.log(`    Found ${repositories.length} repositories in ${workspace.slug}`);
-          const directPermissions: any[] = [];
-
-          for (const repo of repositories.slice(0, 5)) { // Limit to avoid timeout
-            try {
-              const permissions = await this.client.getRepositoryPermissions(workspace.slug, repo, maxAgeMs);
-              const userDirectPermissions = permissions.filter(p =>
-                p.user.uuid === uuid && p.type === 'DIRECT'
-              );
-
-              for (const perm of userDirectPermissions) {
-                directPermissions.push({
-                  repository: repo,
-                  permission: perm.permission,
-                  access_type: perm.type,
-                  group: perm.group
-                });
-              }
-            } catch (error: unknown) {
-              // Ignore permission errors
-            }
-          }
-
-          if (directPermissions.length > 0) {
-            console.log(`Found direct access: ${person.display_name} -> ${workspace.slug} (${directPermissions.length} repos)`);
-            person.workspaces.push({
-              workspace: workspace.slug,
-              groups: [], // No group membership, just direct access
-              repositories: directPermissions
-            });
-          }
-        }
-      }
+      console.log('Cross-workspace direct permission check is now integrated into main processing flow');
     } else {
       console.log('Skipping cross-workspace direct permission check (use ?includeDirectAccess=true to enable)');
     }

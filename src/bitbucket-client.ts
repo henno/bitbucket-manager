@@ -6,6 +6,7 @@ export class BitbucketClient {
   private readonly baseUrlV2 = 'https://api.bitbucket.org/2.0';
   private readonly auth: string;
   private readonly cache: CacheManager;
+  private readonly pendingRequests: Map<string, Promise<any>> = new Map();
 
   constructor(username: string, token: string) {
     this.auth = 'Basic ' + btoa(`${username}:${token}`);
@@ -15,34 +16,67 @@ export class BitbucketClient {
   private async request(url: string, maxAgeMs: number = 60 * 60 * 1000): Promise<any> {
     const cacheKey = `request:${url}`;
     
+    // Check cache first
     const cached = await this.cache.get(cacheKey, maxAgeMs);
     if (cached) {
+      // Check if this is a cached error
+      if (cached && typeof cached === 'object' && 'error' in cached) {
+        throw new Error(cached.error as string);
+      }
       // console.log(`⚡ USING CACHE (${Math.round(maxAgeMs/1000)}s): ${url}`);
       return cached;
     }
 
+    // Check if request is already in progress
+    if (this.pendingRequests.has(url)) {
+      console.log(`⏳ WAITING for pending request: ${url}`);
+      return await this.pendingRequests.get(url)!;
+    }
+
+    // Start new request
     console.log(`🌐 GET (not cached): ${url}`);
     
-    const response = await fetch(url, {
-      headers: {
-        'Authorization': this.auth,
-        'Accept': 'application/json',
-      },
-    }).catch((error: unknown) => {
+    const requestPromise = this.makeRequest(url, cacheKey);
+    this.pendingRequests.set(url, requestPromise);
+    
+    try {
+      return await requestPromise;
+    } finally {
+      this.pendingRequests.delete(url);
+    }
+  }
+
+  private async makeRequest(url: string, cacheKey: string): Promise<any> {
+    try {
+      const response = await fetch(url, {
+        headers: {
+          'Authorization': this.auth,
+          'Accept': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        console.log(`❌ FAILED: ${response.status} ${url}`);
+        const error = `HTTP ${response.status}: ${response.statusText} for ${url}`;
+        
+        // Cache 404s and other client errors to avoid retrying
+        if (response.status >= 400 && response.status < 500) {
+          await this.cache.set(cacheKey, { error });
+        }
+        
+        return Promise.reject(new Error(error));
+      }
+
+      const data = await response.json();
+      await this.cache.set(cacheKey, data);
+      // console.log(`💾 SAVED TO CACHE: ${url}`);
+      return data;
+      
+    } catch (error: unknown) {
       const message = error instanceof Error ? error.message : 'Unknown error';
       console.log(`💥 ERROR: ${url} - ${message}`);
       throw error;
-    });
-
-    if (!response.ok) {
-      console.log(`❌ FAILED: ${response.status} ${url}`);
-      throw new Error(`HTTP ${response.status}: ${response.statusText} for ${url}`);
     }
-
-    const data = await response.json();
-    await this.cache.set(cacheKey, data);
-    // console.log(`💾 SAVED TO CACHE: ${url}`);
-    return data;
   }
 
   async getWorkspacesWithAdminAccess(maxAgeMs: number = 60 * 60 * 1000): Promise<Workspace[]> {

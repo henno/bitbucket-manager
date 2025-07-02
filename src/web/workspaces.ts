@@ -80,15 +80,61 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            border: 1px solid #adb5bd;
           }
           th, td {
             padding: 12px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #adb5bd;
+            border-right: 1px solid #adb5bd;
+          }
+          th:last-child, td:last-child {
+            border-right: none;
+          }
+          .workspace-name {
+            font-weight: bold;
+            position: relative;
+            padding-right: 25px;
+          }
+          .workspace-refresh {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 3px;
+            opacity: 0.6;
+            font-size: 14px;
+            color: #6c757d;
+            z-index: 10;
+            width: auto;
+            height: auto;
+            line-height: 1;
+          }
+          .workspace-refresh:hover {
+            opacity: 1;
+            background: rgba(0,0,0,0.1);
+          }
+          .workspace-refresh.refreshing {
+            opacity: 0.5;
+            pointer-events: none;
+            animation: spin 1s linear infinite;
+          }
+          @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
           }
           th {
-            background: #f8f9fa;
+            background: #dee2e6;
             font-weight: 600;
+          }
+          tr.workspace-even {
+            background-color: #e9ecef;
+          }
+          tr.workspace-odd {
+            background-color: #f8f9fa;
           }
           .repos-count {
             color: #28a745;
@@ -256,24 +302,19 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             const sessionId = localStorage.getItem('sessionId');
             
             try {
-              // Load both people and workspaces data
-              const [peopleResponse, workspacesResponse] = await Promise.all([
-                fetch('/api/people', {
-                  headers: { 'Authorization': 'Bearer ' + sessionId }
-                }),
-                fetch('/api/workspaces', {
-                  headers: { 'Authorization': 'Bearer ' + sessionId }
-                })
-              ]);
+              // Use 1 hour cache duration for initial page load
+              console.log('Loading workspaces data with 1h cache...');
+              const response = await fetch('/api/workspaces/people?maxAge=3600', {
+                headers: { 'Authorization': 'Bearer ' + sessionId }
+              });
 
-              const peopleData = await peopleResponse.json();
-              const workspacesData = await workspacesResponse.json();
+              const data = await response.json();
 
-              if (peopleResponse.ok && workspacesResponse.ok) {
-                displayWorkspacesData(peopleData.data, workspacesData.data);
+              if (response.ok) {
+                displayWorkspacesData(data.data);
               } else {
                 document.getElementById('workspacesData').innerHTML = 
-                  '<div class="error">Error loading workspaces data: Failed to load workspace data</div>';
+                  '<div class="error">Error loading workspaces data: ' + (data.error || 'Failed to load workspace data') + '</div>';
               }
             } catch (error) {
               document.getElementById('workspacesData').innerHTML = 
@@ -281,60 +322,110 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             }
           }
 
-          function displayWorkspacesData(peopleData, workspaces) {
-            // Create a map of workspace -> people
-            const workspaceMap = new Map();
-            
-            // Initialize all workspaces
-            workspaces.forEach(workspace => {
-              workspaceMap.set(workspace.slug, {
-                name: workspace.name,
-                slug: workspace.slug,
-                members: []
-              });
-            });
-
-            // Add people to their workspaces
-            peopleData.forEach(person => {
-              person.workspaces.forEach(workspace => {
-                const workspaceData = workspaceMap.get(workspace.workspace);
-                if (workspaceData) {
-                  workspaceData.members.push({
-                    name: person.display_name,
-                    uuid: person.uuid,
-                    groups: workspace.groups,
-                    repoCount: workspace.repositories.length,
-                    repositories: workspace.repositories
-                  });
-                }
-              });
-            });
-
-            // Sort workspaces by name
-            const sortedWorkspaces = Array.from(workspaceMap.values())
-              .sort((a, b) => a.name.localeCompare(b.name));
+          function displayWorkspacesData(workspaces) {
+            // Data is already organized by workspaces from the API
+            const sortedWorkspaces = workspaces.sort((a, b) => a.name.localeCompare(b.name));
 
             // Flatten data into workspace-person pairs for table format
             const tableRows = [];
             sortedWorkspaces.forEach(workspace => {
-              if (workspace.members.length > 0) {
+              if (workspace.people.length > 0) {
                 // Sort people within each workspace
-                const sortedMembers = workspace.members.sort((a, b) => a.name.localeCompare(b.name));
+                const sortedMembers = workspace.people.sort((a, b) => a.name.localeCompare(b.name));
                 
                 sortedMembers.forEach(memberData => {
-                  const accessInfo = memberData.groups.length > 0 
-                    ? memberData.groups.map(group => \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge">\${group}</a>\`).join(' ')
-                    : memberData.repositories.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge">\${repo.repository}</a>\`).join(' ');
-                  
-                  tableRows.push({
-                    workspace: workspace.name,
-                    person: memberData.name,
-                    access: accessInfo,
-                    repoCount: memberData['repoCount']
-                  });
+                  if (memberData.groups.length > 0) {
+                    // Create separate row for each group
+                    memberData.groups.forEach(group => {
+                      // Get unique repositories for this group
+                      const uniqueRepos = [...new Set(memberData.repositories.map(repo => repo.repository))];
+                      const groupRepos = uniqueRepos.map(repoName => ({ repository: repoName }));
+                      
+                      tableRows.push({
+                        workspace: workspace.name,
+                        workspaceSlug: workspace.slug,
+                        person: memberData.name,
+                        access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge">\${group}</a>\`,
+                        repositories: groupRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge">\${repo.repository}</a>\`).join(' ')
+                      });
+                    });
+                  } else {
+                    // Create separate row for each direct repository access
+                    memberData.repositories.forEach(repo => {
+                      tableRows.push({
+                        workspace: workspace.name,
+                        workspaceSlug: workspace.slug,
+                        person: memberData.name,
+                        access: '',
+                        repositories: \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge">\${repo.repository}</a>\`
+                      });
+                    });
+                  }
                 });
               }
             });
+
+            // Calculate row spans for workspace and person columns
+            const rowsWithSpans = [];
+            let currentWorkspace = '';
+            let currentPerson = '';
+            let workspaceSpan = 0;
+            let personSpan = 0;
+            let workspaceStartIndex = 0;
+            let personStartIndex = 0;
+            let workspaceIndex = 0;
+
+            tableRows.forEach((row, index) => {
+              const workspaceChanged = row['workspace'] !== currentWorkspace;
+              const personChanged = row['person'] !== currentPerson || workspaceChanged;
+
+              // Add rowspan info to previous workspace rows
+              if (workspaceChanged && workspaceSpan > 0) {
+                rowsWithSpans[workspaceStartIndex].workspaceSpan = workspaceSpan;
+              }
+              
+              // Add rowspan info to previous person rows  
+              if (personChanged && personSpan > 0) {
+                rowsWithSpans[personStartIndex].personSpan = personSpan;
+              }
+
+              if (workspaceChanged) {
+                workspaceIndex++;
+              }
+
+              rowsWithSpans.push({
+                ...row,
+                showWorkspace: workspaceChanged,
+                showPerson: personChanged,
+                workspaceSpan: 1,
+                personSpan: 1,
+                workspaceStripe: workspaceIndex % 2 === 0 ? 'workspace-even' : 'workspace-odd'
+              });
+
+              if (workspaceChanged) {
+                currentWorkspace = row['workspace'];
+                workspaceSpan = 1;
+                workspaceStartIndex = index;
+              } else {
+                workspaceSpan++;
+              }
+
+              if (personChanged) {
+                currentPerson = row['person'];
+                personSpan = 1;
+                personStartIndex = index;
+              } else {
+                personSpan++;
+              }
+            });
+
+            // Handle last group
+            if (workspaceSpan > 0) {
+              rowsWithSpans[workspaceStartIndex].workspaceSpan = workspaceSpan;
+            }
+            if (personSpan > 0) {
+              rowsWithSpans[personStartIndex].personSpan = personSpan;
+            }
 
             document.getElementById('workspacesData').innerHTML = \`
               <h3>Workspaces (\${sortedWorkspaces.length} workspaces, \${tableRows.length} access entries)</h3>
@@ -348,17 +439,64 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                   </tr>
                 </thead>
                 <tbody>
-                  \${tableRows.map(row => \`
-                    <tr>
-                      <td>\${row['workspace']}</td>
-                      <td>\${row['person']}</td>
+                  \${rowsWithSpans.map((row) => \`
+                    <tr class="\${row['workspaceStripe']}">
+                      \${row['showWorkspace'] ? \`<td rowspan="\${row['workspaceSpan']}" class="workspace-name">\${row['workspace']}<button class="workspace-refresh" onclick="refreshWorkspace('\${row['workspaceSlug']}')" title="Refresh workspace data">↻</button></td>\` : ''}
+                      \${row['showPerson'] ? \`<td rowspan="\${row['personSpan']}">\${row['person']}</td>\` : ''}
                       <td>\${row['access']}</td>
-                      <td>\${row['repoCount']}</td>
+                      <td>\${row['repositories']}</td>
                     </tr>
                   \`).join('')}
                 </tbody>
               </table>
             \`;
+          }
+
+          async function refreshWorkspace(workspaceSlug) {
+            const sessionId = localStorage.getItem('sessionId');
+            const refreshButton = document.querySelector(\`button[onclick="refreshWorkspace('\${workspaceSlug}')"]\`);
+            
+            if (!refreshButton) return;
+            
+            // Show refreshing state
+            refreshButton.classList.add('refreshing');
+            refreshButton.innerHTML = '⟳';
+            
+            try {
+              // Refresh specific workspace with cache bypass
+              const response = await fetch(\`/api/workspaces/people?maxAge=0&workspace=\${encodeURIComponent(workspaceSlug)}\`, {
+                headers: {
+                  'Authorization': 'Bearer ' + sessionId
+                }
+              });
+
+              if (response.ok) {
+                const data = await response.json();
+                if (data.success && data.data.length > 0) {
+                  // Update only the refreshed workspace data
+                  await updateWorkspaceInTable(data.data[0]);
+                } else {
+                  // If no data returned, reload all data
+                  await loadWorkspacesData();
+                }
+              } else {
+                return Promise.reject(new Error('Failed to refresh workspace data'));
+              }
+            } catch (error) {
+              console.error('Error refreshing workspace:', error);
+              alert('Failed to refresh workspace data. Reloading all data...');
+              await loadWorkspacesData();
+            } finally {
+              // Reset button state
+              refreshButton.classList.remove('refreshing');
+              refreshButton.innerHTML = '↻';
+            }
+          }
+
+          async function updateWorkspaceInTable(_updatedWorkspace) {
+            // For now, just reload all data since partial updates are complex with rowspan
+            // In the future, you could implement more sophisticated partial updates
+            await loadWorkspacesData();
           }
 
           // Handle login form submission
