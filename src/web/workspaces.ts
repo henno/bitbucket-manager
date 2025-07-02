@@ -484,7 +484,20 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
           .toast.error {
             background: #dc3545;
           }
-          
+          .highlight {
+            font-weight: bold;
+            color: #007bff;
+          }
+          .alert-details {
+            background: #fffbe6;
+            border: 1px solid #ffe58f;
+            color: #856404;
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-top: 12px;
+            margin-bottom: 8px;
+            font-size: 1rem;
+          }
           
           /* Smooth scaling from 1080px down to 850px */
           @media (max-width: 1080px) {
@@ -664,7 +677,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
         <div id="mainContent" class="container hidden">
           <div class="header">
             <h1>Bitbucket People Manager</h1>
-            <p>View people and their access across all Bitbucket workspaces</p>
+            <p>View people's access across all your managed workspaces</p>
           </div>
           
           <div class="content-body">
@@ -797,6 +810,18 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                 sortedMembers.forEach(memberData => {
                   let memberHasAnyRows = false;
                   
+                  // Collect all access types for this person in this workspace
+                  const allGroups = [...memberData.groups];
+                  const allProjects = [...new Set(memberData.repositories.filter(repo => repo.access_type === 'PROJECT').map(repo => repo.project))];
+                  const allDirectRepos = memberData.repositories.filter(repo => repo.access_type === 'DIRECT').map(repo => repo.repository);
+                  
+                  // Create comprehensive removal target for this person
+                  const comprehensiveRemoveTarget = {
+                    groups: allGroups,
+                    projects: allProjects,
+                    repositories: allDirectRepos
+                  };
+                  
                   if (memberData.groups.length > 0) {
                     // Create separate row for each group
                     memberData.groups.forEach(group => {
@@ -813,9 +838,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                           personUuid: memberData.uuid,
                           access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge"><span class="group-workspace-part">group</span><span class="group-part">\${group}</span></a>\`,
                           repositories: groupRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' '),
-                          removeTarget: {
-                            groups: [group]
-                          }
+                          removeTarget: comprehensiveRemoveTarget
                         });
                         memberHasAnyRows = true;
                       }
@@ -845,9 +868,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                         personUuid: memberData.uuid,
                         access: \`<span class="project-badge"><span class="project-workspace-part">project</span><span class="project-key-part">\${projectKey}</span></span>\`,
                         repositories: repos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' '),
-                        removeTarget: {
-                          projects: [projectKey]
-                        }
+                        removeTarget: comprehensiveRemoveTarget
                       });
                     });
                     memberHasAnyRows = true;
@@ -865,9 +886,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                       personUuid: memberData.uuid,
                       access: directRepos.map(repo => \`<span class="direct-badge"><span class="direct-repo-part">repo</span><span class="direct-name-part">\${repo.repository}</span></span>\`).join(' '),
                       repositories: directRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' '),
-                      removeTarget: {
-                        repositories: directRepos.map(repo => repo.repository)
-                      }
+                      removeTarget: comprehensiveRemoveTarget
                     });
                     memberHasAnyRows = true;
                   }
@@ -883,9 +902,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                         personUuid: memberData.uuid,
                         access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge"><span class="group-workspace-part">group</span><span class="group-part">\${group}</span></a>\`,
                         repositories: '', // No repositories
-                        removeTarget: {
-                          groups: [group]
-                        }
+                        removeTarget: comprehensiveRemoveTarget
                       });
                     });
                   } else if (!memberHasAnyRows) {
@@ -1096,20 +1113,42 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             if (mode === 'all') {
               message = \`Remove \${userName} from this workspace and revoke all permissions?\`;
             } else if (mode === 'specific' && removeTarget) {
-              if (removeTarget.groups) {
-                message = \`Remove \${userName} from group(s): \${removeTarget.groups.join(', ')}?\`;
-              } else if (removeTarget.repositories) {
-                message = \`Remove \${userName}'s direct access to repository(ies): \${removeTarget.repositories.join(', ')}?\`;
-              } else if (removeTarget.projects) {
-                message = \`Remove \${userName}'s access to project(s): \${removeTarget.projects.join(', ')}?\`;
+              // Build comprehensive message showing all access types that will be removed
+              const accessItems = [];
+              
+              if (removeTarget.groups && removeTarget.groups.length > 0) {
+                accessItems.push(...removeTarget.groups.map(group => \`group \${group}\`));
+              }
+              
+              if (removeTarget.projects && removeTarget.projects.length > 0) {
+                accessItems.push(...removeTarget.projects.map(project => \`project \${project}\`));
+              }
+              
+              if (removeTarget.repositories && removeTarget.repositories.length > 0) {
+                accessItems.push(...removeTarget.repositories.map(repo => \`repo \${repo}\`));
+              }
+              
+              if (accessItems.length > 0) {
+                // Highlight only the group/project/repo names in the list
+                const highlightedAccessItems = [];
+                if (removeTarget.groups && removeTarget.groups.length > 0) {
+                  highlightedAccessItems.push(...removeTarget.groups.map(group => \`group <span class="highlight">\${group}</span>\`));
+                }
+                if (removeTarget.projects && removeTarget.projects.length > 0) {
+                  highlightedAccessItems.push(...removeTarget.projects.map(project => \`project <span class="highlight">\${project}</span>\`));
+                }
+                if (removeTarget.repositories && removeTarget.repositories.length > 0) {
+                  highlightedAccessItems.push(...removeTarget.repositories.map(repo => \`repo <span class="highlight">\${repo}</span>\`));
+                }
+                message = \`Remove <span class="highlight">\${userName}</span> from Workspace <span class="highlight">\${workspaceSlug}</span>?<div class="alert-details">This will remove \${userName} from:<br>- \${highlightedAccessItems.join('<br>- ')}</div>\`;
               } else {
-                message = \`Remove \${userName}'s access?\`;
+                message = \`Remove <span class="highlight">\${userName}</span> from Workspace <span class="highlight">\${workspaceSlug}</span>?\`;
               }
             } else {
               message = \`Remove \${userName}'s access to this specific resource?\`;
             }
             
-            document.getElementById('removeModalText').textContent = message;
+            document.getElementById('removeModalText').innerHTML = message;
             document.getElementById('removeModal').classList.remove('hidden');
           }
 
