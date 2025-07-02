@@ -294,6 +294,118 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             font-style: italic;
             font-size: 0.875rem;
           }
+          .person-badge {
+            display: inline-block;
+            margin: 2px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 4px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          .person-badge:hover .person-name-part {
+            background: #c82333;
+          }
+          .person-badge:hover .person-remove-x {
+            background: #a71e2a;
+          }
+          .person-name-part {
+            display: inline-block;
+            background: #dc3545;
+            color: white;
+            padding: 3px 6px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
+          .person-remove-x {
+            display: inline-block;
+            background: #b02a37;
+            color: white;
+            padding: 3px 6px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            margin-left: -1px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+          }
+          .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+          }
+          .modal-backdrop.hidden {
+            display: none;
+          }
+          .modal {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+          }
+          .modal h3 {
+            margin: 0 0 16px 0;
+            color: #dc3545;
+          }
+          .modal p {
+            margin: 0 0 20px 0;
+            line-height: 1.5;
+          }
+          .modal-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+          }
+          .modal-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+          }
+          .modal-btn.cancel {
+            background: #6c757d;
+            color: white;
+          }
+          .modal-btn.cancel:hover {
+            background: #5a6268;
+          }
+          .modal-btn.remove {
+            background: #dc3545;
+            color: white;
+          }
+          .modal-btn.remove:hover {
+            background: #c82333;
+          }
+          .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            border-radius: 4px;
+            color: white;
+            font-weight: 500;
+            z-index: 1001;
+            max-width: 300px;
+            word-wrap: break-word;
+          }
+          .toast.success {
+            background: #28a745;
+          }
+          .toast.error {
+            background: #dc3545;
+          }
         </style>
       </head>
       <body>
@@ -333,6 +445,18 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
           
           <div id="workspacesData">
             <p>Loading workspaces data...</p>
+          </div>
+        </div>
+
+        <!-- Confirmation Modal -->
+        <div id="removeModal" class="modal-backdrop hidden">
+          <div class="modal">
+            <h3>Remove User from Workspace</h3>
+            <p id="removeModalText">Are you sure you want to remove this user from the workspace and revoke all permissions?</p>
+            <div class="modal-buttons">
+              <button class="modal-btn cancel" onclick="hideRemoveModal()">Cancel</button>
+              <button class="modal-btn remove" onclick="confirmRemoveUser()">Remove</button>
+            </div>
           </div>
         </div>
 
@@ -460,8 +584,12 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                           workspace: workspace.name,
                           workspaceSlug: workspace.slug,
                           person: memberData.name,
+                          personUuid: memberData.uuid,
                           access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge"><span class="workspace-part">\${workspace.slug}</span><span class="group-part">\${group}</span></a>\`,
-                          repositories: groupRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' ')
+                          repositories: groupRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' '),
+                          removeTarget: {
+                            groups: [group]
+                          }
                         });
                         memberHasAnyRows = true;
                       }
@@ -473,12 +601,28 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                     repo.access_type === 'PROJECT'
                   );
                   if (projectRepos.length > 0) {
-                    tableRows.push({
-                      workspace: workspace.name,
-                      workspaceSlug: workspace.slug,
-                      person: memberData.name,
-                      access: \`<span class="project-badge">PROJECT</span>\`,
-                      repositories: projectRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' ')
+                    // Group project repos by their project key
+                    const projectGroups = {};
+                    projectRepos.forEach(repo => {
+                      if (!projectGroups[repo.project]) {
+                        projectGroups[repo.project] = [];
+                      }
+                      projectGroups[repo.project].push(repo);
+                    });
+                    
+                    // Create separate row for each project
+                    Object.entries(projectGroups).forEach(([projectKey, repos]) => {
+                      tableRows.push({
+                        workspace: workspace.name,
+                        workspaceSlug: workspace.slug,
+                        person: memberData.name,
+                        personUuid: memberData.uuid,
+                        access: \`<span class="project-badge">PROJECT: \${projectKey}</span>\`,
+                        repositories: repos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' '),
+                        removeTarget: {
+                          projects: [projectKey]
+                        }
+                      });
                     });
                     memberHasAnyRows = true;
                   }
@@ -492,8 +636,12 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                       workspace: workspace.name,
                       workspaceSlug: workspace.slug,
                       person: memberData.name,
+                      personUuid: memberData.uuid,
                       access: \`<span class="direct-badge">DIRECT</span>\`,
-                      repositories: directRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' ')
+                      repositories: directRepos.map(repo => \`<a href="https://bitbucket.org/\${workspace.slug}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge \${repo.permission || 'read'}"><span class="workspace-part-repo">\${workspace.slug}</span><span class="repo-part">\${repo.repository}</span></a>\`).join(' '),
+                      removeTarget: {
+                        repositories: directRepos.map(repo => repo.repository)
+                      }
                     });
                     memberHasAnyRows = true;
                   }
@@ -506,8 +654,12 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                         workspace: workspace.name,
                         workspaceSlug: workspace.slug,
                         person: memberData.name,
+                        personUuid: memberData.uuid,
                         access: \`<a href="https://bitbucket.org/\${workspace.slug}/workspace/settings/user-directory" target="_blank" class="workspace-badge"><span class="workspace-part">\${workspace.slug}</span><span class="group-part">\${group}</span></a>\`,
-                        repositories: '' // No repositories
+                        repositories: '', // No repositories
+                        removeTarget: {
+                          groups: [group]
+                        }
                       });
                     });
                   } else if (!memberHasAnyRows) {
@@ -516,8 +668,12 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                       workspace: workspace.name,
                       workspaceSlug: workspace.slug,
                       person: memberData.name,
+                      personUuid: memberData.uuid,
                       access: \`<span class="no-access">No access</span>\`,
-                      repositories: '' // No repositories
+                      repositories: '', // No repositories
+                      removeTarget: {
+                        removeAll: true // Fallback for users with no specific access
+                      }
                     });
                   }
                 });
@@ -601,7 +757,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                   \${rowsWithSpans.map((row) => \`
                     <tr class="\${row['workspaceStripe']}">
                       \${row['showWorkspace'] ? \`<td rowspan="\${row['workspaceSpan']}" class="workspace-name">\${row['workspace']}<button class="workspace-refresh" onclick="refreshWorkspace('\${row['workspaceSlug']}')" title="Refresh workspace data">↻</button></td>\` : ''}
-                      \${row['showPerson'] ? \`<td rowspan="\${row['personSpan']}">\${row['person']}</td>\` : ''}
+                      \${row['showPerson'] ? \`<td rowspan="\${row['personSpan']}"><div class="person-badge"><span class="person-name-part">\${row['person']}</span><span class="person-remove-x" data-remove-target="\${btoa(JSON.stringify(row['removeTarget']))}" data-user-uuid="\${row['personUuid']}" onclick="showRemoveModal('\${row['person']}', '\${row['workspaceSlug']}', 'specific', this)" title="Remove \${row['person']} from this specific access">×</span></div></td>\` : ''}
                       <td>\${row['access']}</td>
                       <td>\${row['repositories']}</td>
                     </tr>
@@ -675,6 +831,170 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             
             button.textContent = 'Sign In';
             button.disabled = false;
+          });
+
+          // Modal and user removal functionality
+          let currentRemovalUser = null;
+          let currentRemovalWorkspace = null;
+          let currentRemovalMode = null;
+          let currentRemovalTarget = null;
+          let currentRemovalUserUuid = null;
+
+          function showRemoveModal(userName, workspaceSlug, mode = 'all', element = null) {
+            currentRemovalUser = userName;
+            currentRemovalWorkspace = workspaceSlug;
+            currentRemovalMode = mode;
+            
+            // Extract user UUID from the element
+            if (element && element.dataset.userUuid) {
+              currentRemovalUserUuid = element.dataset.userUuid;
+            } else {
+              currentRemovalUserUuid = null;
+            }
+            
+            let removeTarget = null;
+            if (mode === 'specific' && element && element.dataset.removeTarget) {
+              try {
+                removeTarget = JSON.parse(atob(element.dataset.removeTarget));
+                currentRemovalTarget = removeTarget;
+              } catch (error) {
+                console.error('Failed to parse removal target:', error);
+                removeTarget = null;
+                currentRemovalTarget = null;
+              }
+            }
+            
+            let message;
+            if (mode === 'all') {
+              message = \`Remove \${userName} from this workspace and revoke all permissions?\`;
+            } else if (mode === 'specific' && removeTarget) {
+              if (removeTarget.groups) {
+                message = \`Remove \${userName} from group(s): \${removeTarget.groups.join(', ')}?\`;
+              } else if (removeTarget.repositories) {
+                message = \`Remove \${userName}'s direct access to repository(ies): \${removeTarget.repositories.join(', ')}?\`;
+              } else if (removeTarget.projects) {
+                message = \`Remove \${userName}'s access to project(s): \${removeTarget.projects.join(', ')}?\`;
+              } else {
+                message = \`Remove \${userName}'s access?\`;
+              }
+            } else {
+              message = \`Remove \${userName}'s access to this specific resource?\`;
+            }
+            
+            document.getElementById('removeModalText').textContent = message;
+            document.getElementById('removeModal').classList.remove('hidden');
+          }
+
+          function hideRemoveModal() {
+            currentRemovalUser = null;
+            currentRemovalWorkspace = null;
+            currentRemovalMode = null;
+            currentRemovalTarget = null;
+            currentRemovalUserUuid = null;
+            document.getElementById('removeModal').classList.add('hidden');
+          }
+
+          async function confirmRemoveUser() {
+            if (!currentRemovalUser || !currentRemovalWorkspace) {
+              return;
+            }
+
+            const sessionId = localStorage.getItem('sessionId');
+            
+            // Update modal to show progress
+            const removeButton = document.querySelector('.modal-btn.remove');
+            const originalText = removeButton.textContent;
+            removeButton.textContent = 'Removing...';
+            removeButton.disabled = true;
+            
+            try {
+              // Prepare removal targets based on mode
+              let removeTargets;
+              if (currentRemovalMode === 'all') {
+                removeTargets = { removeAll: true };
+              } else if (currentRemovalMode === 'specific' && currentRemovalTarget) {
+                removeTargets = currentRemovalTarget;
+              } else {
+                removeTargets = { removeAll: true }; // Fallback
+              }
+              
+              // Add user UUID to the request body to avoid backend name resolution
+              if (currentRemovalUserUuid) {
+                removeTargets.userUuid = currentRemovalUserUuid;
+              }
+              
+              // Use longer timeout for user removal operations
+              const controller = new AbortController();
+              const timeoutId = setTimeout(() => controller.abort(), 180000); // 3 minutes
+              
+              const response = await fetch(\`/api/workspaces/\${currentRemovalWorkspace}/users/\${encodeURIComponent(currentRemovalUser)}\`, {
+                method: 'DELETE',
+                headers: {
+                  'Authorization': 'Bearer ' + sessionId,
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(removeTargets),
+                signal: controller.signal
+              });
+
+              clearTimeout(timeoutId);
+
+              if (response.ok) {
+                const result = await response.json();
+                showToast(result.message || \`\${currentRemovalUser} has been removed from the workspace\`, 'success');
+                hideRemoveModal();
+                // Backend invalidated cache for affected workspace, so reload page
+                // Only the affected workspace will fetch fresh data, others use cache
+                setTimeout(() => location.reload(), 1000); // Small delay to show toast
+              } else {
+                const error = await response.json();
+                showToast(error.error || 'Failed to remove user from workspace', 'error');
+                hideRemoveModal(); // Hide modal even on error
+              }
+            } catch (error) {
+              let message = 'Error removing user: ' + error.message;
+              if (error.name === 'AbortError') {
+                message = 'User removal is taking longer than expected. The operation may still complete in the background.';
+              }
+              showToast(message, 'error');
+              hideRemoveModal(); // Hide modal even on timeout
+            } finally {
+              // Reset button state
+              removeButton.textContent = originalText;
+              removeButton.disabled = false;
+            }
+          }
+
+          function showToast(message, type = 'success') {
+            // Remove any existing toasts
+            const existingToast = document.querySelector('.toast');
+            if (existingToast) {
+              existingToast.remove();
+            }
+
+            const toast = document.createElement('div');
+            toast.className = \`toast \${type}\`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+              if (toast.parentNode) {
+                toast.remove();
+              }
+            }, 5000);
+          }
+
+          // Close modal when clicking outside
+          document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('removeModal');
+            if (modal) {
+              modal.addEventListener('click', (e) => {
+                if (e.target.id === 'removeModal') {
+                  hideRemoveModal();
+                }
+              });
+            }
           });
 
           // Check auth when page loads

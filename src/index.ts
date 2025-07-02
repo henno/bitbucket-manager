@@ -27,10 +27,14 @@ const peopleService = new PeopleService(username, token);
 const startTime = Date.now();
 const getRelativeTime = () => `[${((Date.now() - startTime) / 1000).toFixed(3)}s]`;
 
-// Override console.log to add timestamps
+// Override console.log and console.warn to add timestamps
 const originalLog = console.log;
+const originalWarn = console.warn;
 console.log = (...args) => {
   originalLog(getRelativeTime(), ...args);
+};
+console.warn = (...args) => {
+  originalWarn(getRelativeTime(), ...args);
 };
 
 // Mount API routes
@@ -63,4 +67,5 @@ console.log(`Starting server on http://localhost:${port}`);
 Bun.serve({
   port,
   fetch: app.fetch,
+  idleTimeout: 120, // Increase timeout to 2 minutes for user removal operations
 });

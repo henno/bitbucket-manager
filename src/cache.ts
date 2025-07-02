@@ -52,7 +52,7 @@ export class CacheManager {
     stmt.run(key, JSON.stringify(data), Date.now());
   }
 
-  private delete(key: string): void {
+  delete(key: string): void {
     const stmt = this.db.prepare('DELETE FROM cache WHERE key = ?');
     stmt.run(key);
   }

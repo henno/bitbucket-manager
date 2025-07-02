@@ -34,8 +34,9 @@ export interface PersonData {
     repositories: {
       repository: string;
       permission: string;
-      access_type: 'DIRECT' | 'GROUP';
+      access_type: 'DIRECT' | 'GROUP' | 'PROJECT';
       group?: string;
+      project?: string;
     }[];
   }[];
 }
@@ -45,4 +46,14 @@ export interface Workspace {
   slug: string;
   name: string;
   is_private: boolean;
+}
+
+export interface BitbucketUserPermission {
+  user: BitbucketUser;
+  permission: string;
+}
+
+export interface BitbucketProjectPermission {
+  user: BitbucketUser;
+  permission: string;
 }

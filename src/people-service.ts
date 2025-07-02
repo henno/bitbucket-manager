@@ -45,7 +45,8 @@ export class PeopleService {
             repository: repo,
             permission: perm.permission,
             access_type: 'PROJECT',
-            group: undefined
+            group: undefined,
+            project: projectKey
           });
         });
       }
@@ -59,25 +60,20 @@ export class PeopleService {
     const peopleMap = new Map<string, PersonData>();
     
     try {
-      // Fetch members and repositories in parallel for the specific workspace
-      const [members, repositories] = await Promise.all([
+      // Fetch members and repositories with projects in parallel for the specific workspace
+      const [members, reposWithProjects] = await Promise.all([
         this.client.getAllWorkspaceMembers(workspaceSlug, maxAgeMs),
-        this.client.getWorkspaceRepositories(workspaceSlug, maxAgeMs)
+        this.client.getWorkspaceRepositoriesWithProjects(workspaceSlug, maxAgeMs)
       ]);
       
-
-      console.log(`Workspace ${workspaceSlug}: ${members.length} members, ${repositories.length} repos`);
-
       if (members.length === 0) {
-        console.log(`No members in ${workspaceSlug}, returning empty`);
         return [];
       }
 
       const workspaceResults: { member: any, workspaceData: any }[] = [];
       const directAccessUsers = new Map<string, any>();
 
-      // First, get repositories with their project information
-      const reposWithProjects = await this.client.getWorkspaceRepositoriesWithProjects(workspaceSlug, maxAgeMs);
+      // Use the repositories with project information we already fetched
       const reposToProcess = reposWithProjects.map(r => r.slug);
       const repositoryPermissions = new Map<string, any[]>();
       
@@ -199,37 +195,42 @@ export class PeopleService {
   }
 
   async getAllPeople(maxAgeMs: number = 60 * 60 * 1000, includeDirectAccess: boolean = false): Promise<PersonData[]> {
-    console.log(`Fetching workspaces... (includeDirectAccess: ${includeDirectAccess})`);
     const workspaces = await this.client.getWorkspacesWithAdminAccess(maxAgeMs);
-    console.log(`Found ${workspaces.length} workspaces`);
+    
+    // Remove duplicates if any exist
+    const uniqueWorkspaces = workspaces.filter((workspace, index, self) => 
+      index === self.findIndex(w => w.slug === workspace.slug)
+    );
+    
+    if (uniqueWorkspaces.length !== workspaces.length) {
+      const duplicates = workspaces.filter((workspace, index, self) => 
+        index !== self.findIndex(w => w.slug === workspace.slug)
+      );
+      console.log(`Removed ${duplicates.length} duplicate workspaces: ${duplicates.map(w => w.slug).join(', ')}`);
+    }
 
     const peopleMap = new Map<string, PersonData>();
 
     // Process all workspaces in parallel
-    console.log(`Processing ${workspaces.length} workspaces in parallel...`);
+    console.log(`Processing ${uniqueWorkspaces.length} workspaces in parallel...`);
 
-    const workspacePromises = workspaces.map(async (workspace, i) => {
-      console.log(`Starting workspace ${i + 1}/${workspaces.length}: ${workspace.slug}`);
+    const workspacePromises = uniqueWorkspaces.map(async (workspace) => {
 
       try {
-        // Fetch members and repositories in parallel for each workspace
-        const [members, repositories] = await Promise.all([
+        // Fetch members and repositories with projects in parallel for each workspace
+        const [members, reposWithProjects] = await Promise.all([
           this.client.getAllWorkspaceMembers(workspace.slug, maxAgeMs),
-          this.client.getWorkspaceRepositories(workspace.slug, maxAgeMs)
+          this.client.getWorkspaceRepositoriesWithProjects(workspace.slug, maxAgeMs)
         ]);
-
-        console.log(`Workspace ${workspace.slug}: ${members.length} members, ${repositories.length} repos`);
-
+        
         if (members.length === 0) {
-          console.log(`No members in ${workspace.slug}, skipping`);
           return [];
         }
 
         const workspaceResults: { member: any, workspaceData: any }[] = [];
         const directAccessUsers = new Map<string, any>(); // Track users with direct access
 
-        // First, get repositories with their project information
-        const reposWithProjects = await this.client.getWorkspaceRepositoriesWithProjects(workspace.slug, maxAgeMs);
+        // Use the repositories with project information we already fetched
         const reposToProcess = reposWithProjects.map(r => r.slug);
         const repositoryPermissions = new Map<string, any[]>();
         
@@ -299,7 +300,6 @@ export class PeopleService {
 
         // Process direct access users who aren't group members using cached permissions
         const directAccessPromises = Array.from(directAccessUsers.entries()).map(async ([uuid, directUser]) => {
-          console.log(`Found direct-only user: ${directUser.display_name} in ${workspace.slug}`);
 
           const workspaceData = {
             workspace: workspace.slug,
@@ -328,7 +328,6 @@ export class PeopleService {
         const directAccessResults = await Promise.all(directAccessPromises);
         workspaceResults.push(...directAccessResults.filter(result => result !== null));
 
-        console.log(`✅ Completed workspace ${workspace.slug}`);
         return workspaceResults;
       } catch (error: unknown) {
         const message = error instanceof Error ? error.message : 'Unknown error';
@@ -356,13 +355,12 @@ export class PeopleService {
     }
 
     if (includeDirectAccess) {
-      console.log('Cross-workspace direct permission check is now integrated into main processing flow');
     } else {
       console.log('Skipping cross-workspace direct permission check (use ?includeDirectAccess=true to enable)');
     }
 
     const result = Array.from(peopleMap.values());
-    console.log(`Processed ${result.length} people from ${workspaces.length} workspaces`);
+    console.log(`Processed ${result.length} people from ${uniqueWorkspaces.length} workspaces`);
     return result;
   }
 

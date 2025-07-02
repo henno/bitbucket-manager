@@ -112,5 +112,98 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
     }
   });
 
+  // Remove user from specific workspace resources
+  route.delete('/:workspaceSlug/users/:userName', authMiddleware, async (c) => {
+    try {
+      const { workspaceSlug, userName } = c.req.param();
+      const removeTargets = await c.req.json();
+
+      if (!userName) {
+        return c.json({ error: 'User name is required' }, 400);
+      }
+
+      console.log(`API: Removing user "${userName}" from specific resources in workspace "${workspaceSlug}"`, removeTargets);
+
+      // Use UUID if provided for faster, more robust removal
+      const userIdentifier = removeTargets.userUuid || userName;
+      const isUuid = !!removeTargets.userUuid;
+      
+      if (isUuid) {
+        console.log(`Using provided UUID for faster removal: ${userIdentifier}`);
+      }
+
+      const result = await peopleService.client.removeUserFromSpecificResources(
+        workspaceSlug, 
+        userIdentifier, 
+        removeTargets,
+        isUuid
+      );
+
+      // Selectively invalidate cache based on what was actually removed
+      if (result.removedFrom.length > 0) {
+        console.log(`Selectively invalidating cache for workspace ${workspaceSlug} after user removal`);
+        
+        // Extract specific resources that were modified from the removal result
+        const cacheTargets: { groups?: string[], repositories?: string[], projects?: string[] } = {};
+        
+        result.removedFrom.forEach(removal => {
+          if (removal.startsWith('group:')) {
+            const groupSlug = removal.replace('group:', '');
+            if (!cacheTargets.groups) cacheTargets.groups = [];
+            cacheTargets.groups.push(groupSlug);
+          } else if (removal.startsWith('repository:')) {
+            const repoName = removal.replace('repository:', '').replace('(direct)', '');
+            if (!cacheTargets.repositories) cacheTargets.repositories = [];
+            cacheTargets.repositories.push(repoName);
+          } else if (removal.startsWith('project:')) {
+            const projectKey = removal.replace('project:', '');
+            if (!cacheTargets.projects) cacheTargets.projects = [];
+            cacheTargets.projects.push(projectKey);
+          }
+        });
+        
+        // Use selective cache invalidation if we have specific targets, otherwise invalidate all
+        if (Object.keys(cacheTargets).length > 0) {
+          await peopleService.client.invalidateWorkspaceCache(workspaceSlug, cacheTargets);
+        } else {
+          await peopleService.client.invalidateWorkspaceCache(workspaceSlug);
+        }
+      }
+
+      if (result.errors.length > 0) {
+        console.warn('User removal completed with some errors:', result.errors);
+        
+        if (result.removedFrom.length > 0) {
+          return c.json({
+            success: true,
+            message: `User "${userName}" partially removed. Removed from: ${result.removedFrom.join(', ')}`,
+            removedFrom: result.removedFrom,
+            errors: result.errors
+          });
+        } else {
+          return c.json({
+            success: false,
+            error: `Failed to remove user "${userName}": ${result.errors.join('; ')}`,
+            errors: result.errors
+          }, 500);
+        }
+      }
+
+      return c.json({
+        success: true,
+        message: `User "${userName}" has been removed from specified resources`,
+        removedFrom: result.removedFrom
+      });
+
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : 'Unknown error';
+      console.error('Error removing user from workspace:', error);
+      return c.json({
+        success: false,
+        error: `Failed to remove user: ${message}`
+      }, 500);
+    }
+  });
+
   return route;
 }
