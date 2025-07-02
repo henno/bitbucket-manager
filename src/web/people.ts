@@ -80,15 +80,26 @@ export function createPeopleRoute(_peopleService: PeopleService) {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            border: 1px solid #adb5bd;
           }
           th, td {
             padding: 12px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #adb5bd;
+            border-right: 1px solid #adb5bd;
+          }
+          th:last-child, td:last-child {
+            border-right: none;
           }
           th {
-            background: #f8f9fa;
+            background: #dee2e6;
             font-weight: 600;
+          }
+          tr.workspace-even {
+            background-color: #e9ecef;
+          }
+          tr.workspace-odd {
+            background-color: #f8f9fa;
           }
           .nav-links {
             margin-bottom: 20px;
@@ -103,35 +114,71 @@ export function createPeopleRoute(_peopleService: PeopleService) {
           }
           .workspace-badge {
             display: inline-block;
-            background: #dc3545;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 4px;
             margin: 2px;
             font-size: 0.875rem;
             font-weight: 500;
             text-decoration: none;
             cursor: pointer;
+            border-radius: 4px;
+            overflow: hidden;
+            white-space: nowrap;
           }
-          .workspace-badge:hover {
+          .workspace-badge:hover .workspace-part {
             background: #c82333;
+          }
+          .workspace-badge:hover .group-part {
+            background: #a71e2a;
+          }
+          .workspace-part {
+            display: inline-block;
+            background: #dc3545;
             color: white;
+            padding: 3px 6px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
+          .group-part {
+            display: inline-block;
+            background: #b02a37;
+            color: white;
+            padding: 3px 6px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            margin-left: -1px;
           }
           .repo-badge {
             display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 3px 8px;
-            border-radius: 4px;
             margin: 2px;
             font-size: 0.875rem;
             font-weight: 500;
             text-decoration: none;
             cursor: pointer;
+            border-radius: 4px;
+            overflow: hidden;
+            white-space: nowrap;
           }
-          .repo-badge:hover {
+          .repo-badge:hover .workspace-part-repo {
             background: #e0a800;
+          }
+          .repo-badge:hover .repo-part {
+            background: #d39e00;
+          }
+          .workspace-part-repo {
+            display: inline-block;
+            background: #ffc107;
             color: #212529;
+            padding: 3px 6px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
+          .repo-part {
+            display: inline-block;
+            background: #e6ac00;
+            color: #212529;
+            padding: 3px 6px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            margin-left: -1px;
           }
         </style>
       </head>
@@ -284,34 +331,43 @@ export function createPeopleRoute(_peopleService: PeopleService) {
                   <tr>
                     <th>Name</th>
                     <th>Workspaces</th>
+                    <th>Repositories</th>
                     <th>Total Repositories</th>
                   </tr>
                 </thead>
                 <tbody>
-                  \${sortedPeople.map(person => {
-                    // Create workspace entries with proper formatting
-                    const workspaceEntries = person.workspaces.map(w => {
-                      // If person has group membership, show just workspace name
+                  \${sortedPeople.map((person, index) => {
+                    // Separate workspace and repository entries
+                    const workspaceEntries = [];
+                    const repositoryEntries = [];
+                    
+                    person.workspaces.forEach(w => {
+                      // If person has group membership, show workspace/group badges
                       if (w.groups && w.groups.length > 0) {
-                        return \`<a href="https://bitbucket.org/\${w.workspace}/workspace/settings/user-directory" target="_blank" class="workspace-badge">\${w.workspace}</a>\`;
+                        w.groups.forEach(group => {
+                          workspaceEntries.push(\`<a href="https://bitbucket.org/\${w.workspace}/workspace/settings/user-directory" target="_blank" class="workspace-badge"><span class="workspace-part">\${w.workspace}</span><span class="group-part">\${group}</span></a>\`);
+                        });
                       }
-                      // If only direct access, show workspace/repo for each repo
-                      else if (w.repositories && w.repositories.length > 0) {
-                        return w.repositories.map(repo => \`<a href="https://bitbucket.org/\${w.workspace}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge">\${w.workspace}/\${repo.repository}</a>\`).join(' ');
-                      }
-                      // Fallback to just workspace name
-                      else {
-                        return \`<a href="https://bitbucket.org/\${w.workspace}/workspace/settings/user-directory" target="_blank" class="workspace-badge">\${w.workspace}</a>\`;
+                      
+                      // Show individual repositories
+                      if (w.repositories && w.repositories.length > 0) {
+                        w.repositories.forEach(repo => {
+                          repositoryEntries.push(\`<a href="https://bitbucket.org/\${w.workspace}/\${repo.repository}/admin/permissions" target="_blank" class="repo-badge"><span class="workspace-part-repo">\${w.workspace}</span><span class="repo-part">\${repo.repository}</span></a>\`);
+                        });
                       }
                     });
                     
-                    // Sort the entries alphabetically
-                    const sortedWorkspaceEntries = workspaceEntries.sort((a, b) => a.localeCompare(b));
+                    // Remove duplicates and sort
+                    const uniqueWorkspaces = [...new Set(workspaceEntries)].sort((a, b) => a.localeCompare(b));
+                    const sortedRepositories = repositoryEntries.sort((a, b) => a.localeCompare(b));
+                    
+                    const stripeClass = index % 2 === 0 ? 'workspace-even' : 'workspace-odd';
                     
                     return \`
-                      <tr>
+                      <tr class="\${stripeClass}">
                         <td>\${person.display_name}</td>
-                        <td>\${sortedWorkspaceEntries.join(' ')}</td>
+                        <td>\${uniqueWorkspaces.join(' ')}</td>
+                        <td>\${sortedRepositories.join(' ')}</td>
                         <td>\${person.workspaces.reduce((total, w) => total + w.repositories.length, 0)}</td>
                       </tr>
                     \`;

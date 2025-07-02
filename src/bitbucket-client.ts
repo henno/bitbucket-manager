@@ -112,6 +112,45 @@ export class BitbucketClient {
     }
   }
 
+  async getWorkspaceProjects(workspace: string, maxAgeMs: number = 60 * 60 * 1000): Promise<any[]> {
+    try {
+      let projects: any[] = [];
+      let url = `${this.baseUrlV2}/workspaces/${workspace}/projects?pagelen=100`;
+      
+      while (url) {
+        const data = await this.request(url, maxAgeMs);
+        const projectList = data.values || [];
+        projects = projects.concat(projectList);
+        url = data.next;
+      }
+      
+      return projects;
+    } catch (error) {
+      console.warn(`Could not fetch projects for workspace ${workspace}:`, error);
+      return [];
+    }
+  }
+
+  async getProjectUserPermissions(workspace: string, projectKey: string, maxAgeMs: number = 60 * 60 * 1000): Promise<any[]> {
+    try {
+      const permissions: any[] = [];
+      let url = `${this.baseUrlV2}/workspaces/${workspace}/projects/${projectKey}/permissions-config/users?pagelen=100`;
+      
+      while (url) {
+        const data = await this.request(url, maxAgeMs);
+        const permList = data.values || [];
+        permissions.push(...permList);
+        url = data.next;
+      }
+      
+      return permissions;
+    } catch (error) {
+      console.warn(`Could not fetch project user permissions for ${workspace}/${projectKey}:`, error);
+      return [];
+    }
+  }
+
+
   async getWorkspaceRepositories(workspace: string, maxAgeMs: number = 60 * 60 * 1000): Promise<string[]> {
     try {
       let repositories: string[] = [];
@@ -128,6 +167,32 @@ export class BitbucketClient {
       return repositories;
     } catch (error) {
       console.warn(`Could not fetch repositories for workspace ${workspace}:`, error);
+      return [];
+    }
+  }
+
+  async getWorkspaceRepositoriesWithProjects(workspace: string, maxAgeMs: number = 60 * 60 * 1000): Promise<{slug: string, project?: {key: string, name: string}}[]> {
+    try {
+      let repositories: {slug: string, project?: {key: string, name: string}}[] = [];
+      // noinspection SpellCheckingInspection
+      let url = `${this.baseUrlV2}/repositories/${workspace}?pagelen=100`;
+      
+      while (url) {
+        const data = await this.request(url, maxAgeMs);
+        const repos = data.values?.map((repo: any) => ({
+          slug: repo.slug,
+          project: repo.project ? {
+            key: repo.project.key,
+            name: repo.project.name
+          } : undefined
+        })) || [];
+        repositories = repositories.concat(repos);
+        url = data.next;
+      }
+      
+      return repositories;
+    } catch (error) {
+      console.warn(`Could not fetch repositories with projects for workspace ${workspace}:`, error);
       return [];
     }
   }

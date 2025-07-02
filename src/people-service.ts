@@ -8,8 +8,53 @@ export class PeopleService {
     this.client = new BitbucketClient(username, token);
   }
 
+  private addRepositoryPermissions(
+    member: any,
+    reposToProcess: string[],
+    reposWithProjects: {slug: string, project?: {key: string, name: string}}[],
+    repositoryPermissions: Map<string, any[]>,
+    projectPermissions: Map<string, any[]>,
+    workspaceData: any
+  ): void {
+    reposToProcess.forEach((repo) => {
+      const permissions = repositoryPermissions.get(repo) || [];
+      const userPermissions = permissions.filter((p: any) => p.user?.uuid === member.uuid);
+      
+      // Add direct repository permissions
+      userPermissions.forEach((perm: any) => {
+        workspaceData.repositories.push({
+          repository: repo,
+          permission: perm.permission,
+          access_type: perm.type,
+          group: perm.group
+        });
+      });
+      
+      // Check for project-level permissions
+      const repoWithProject = reposWithProjects.find(r => r.slug === repo);
+      if (repoWithProject?.project?.key) {
+        const projectKey = repoWithProject.project.key;
+        const projectPerms = projectPermissions.get(projectKey) || [];
+        const memberProjectPermissions = projectPerms.filter((p: any) => {
+          const projectUserUuid = p.user?.uuid?.replace(/[{}]/g, '');
+          return projectUserUuid === member.uuid;
+        });
+        
+        memberProjectPermissions.forEach((perm: any) => {
+          workspaceData.repositories.push({
+            repository: repo,
+            permission: perm.permission,
+            access_type: 'PROJECT',
+            group: undefined
+          });
+        });
+      }
+    });
+  }
+
   async getWorkspacePeople(workspaceSlug: string, maxAgeMs: number = 60 * 60 * 1000): Promise<PersonData[]> {
     console.log(`Fetching people for workspace: ${workspaceSlug}`);
+    
     
     const peopleMap = new Map<string, PersonData>();
     
@@ -19,6 +64,7 @@ export class PeopleService {
         this.client.getAllWorkspaceMembers(workspaceSlug, maxAgeMs),
         this.client.getWorkspaceRepositories(workspaceSlug, maxAgeMs)
       ]);
+      
 
       console.log(`Workspace ${workspaceSlug}: ${members.length} members, ${repositories.length} repos`);
 
@@ -30,9 +76,25 @@ export class PeopleService {
       const workspaceResults: { member: any, workspaceData: any }[] = [];
       const directAccessUsers = new Map<string, any>();
 
-      // First, fetch all repository permissions once (not per member)
-      const reposToProcess = repositories.slice(0, 5);
+      // First, get repositories with their project information
+      const reposWithProjects = await this.client.getWorkspaceRepositoriesWithProjects(workspaceSlug, maxAgeMs);
+      const reposToProcess = reposWithProjects.map(r => r.slug);
       const repositoryPermissions = new Map<string, any[]>();
+      
+      // Get project-level permissions for all projects
+      const projectPermissions = new Map<string, any[]>(); // projectKey -> user permissions
+      const projects = await this.client.getWorkspaceProjects(workspaceSlug, maxAgeMs);
+      
+      for (const project of projects) {
+        if (project.key) {
+          try {
+            const projectUserPerms = await this.client.getProjectUserPermissions(workspaceSlug, project.key, maxAgeMs);
+            projectPermissions.set(project.key, projectUserPerms);
+          } catch (error: unknown) {
+            console.error(`Error getting project permissions for ${project.key}:`, error instanceof Error ? error.message : error);
+          }
+        }
+      }
       
       const repoPermissionPromises = reposToProcess.map(async (repo) => {
         try {
@@ -66,16 +128,14 @@ export class PeopleService {
         };
 
         // Check member's access to each repository using cached permissions
-        reposToProcess.forEach((repo) => {
-          const permissions = repositoryPermissions.get(repo) || [];
-          const memberPermission = permissions.find((p: any) => p.user?.uuid === member.uuid);
-          if (memberPermission) {
-            workspaceData.repositories.push({
-              repository: repo,
-              permission: memberPermission.permission
-            });
-          }
-        });
+        this.addRepositoryPermissions(
+          member,
+          reposToProcess,
+          reposWithProjects,
+          repositoryPermissions,
+          projectPermissions,
+          workspaceData
+        );
 
         if (workspaceData.repositories.length > 0) {
           workspaceResults.push({ member, workspaceData });
@@ -168,9 +228,25 @@ export class PeopleService {
         const workspaceResults: { member: any, workspaceData: any }[] = [];
         const directAccessUsers = new Map<string, any>(); // Track users with direct access
 
-        // First, fetch all repository permissions once (not per member)
-        const reposToProcess = repositories.slice(0, 5);
+        // First, get repositories with their project information
+        const reposWithProjects = await this.client.getWorkspaceRepositoriesWithProjects(workspace.slug, maxAgeMs);
+        const reposToProcess = reposWithProjects.map(r => r.slug);
         const repositoryPermissions = new Map<string, any[]>();
+        
+        // Get project-level permissions for all projects
+        const projectPermissions = new Map<string, any[]>(); // projectKey -> user permissions
+        const projects = await this.client.getWorkspaceProjects(workspace.slug, maxAgeMs);
+        
+        for (const project of projects) {
+          if (project.key) {
+            try {
+              const projectUserPerms = await this.client.getProjectUserPermissions(workspace.slug, project.key, maxAgeMs);
+              projectPermissions.set(project.key, projectUserPerms);
+            } catch (error: unknown) {
+              console.error(`Error getting project permissions for ${project.key}:`, error instanceof Error ? error.message : error);
+            }
+          }
+        }
         
         const repoPermissionPromises = reposToProcess.map(async (repo) => {
           try {
@@ -209,16 +285,14 @@ export class PeopleService {
           };
 
           // Check member's access to each repository using cached permissions
-          reposToProcess.forEach((repo) => {
-            const permissions = repositoryPermissions.get(repo) || [];
-            const userPermissions = permissions.filter(p => p.user.uuid === member.uuid);
-            workspaceData.repositories.push(...userPermissions.map(perm => ({
-              repository: repo,
-              permission: perm.permission,
-              access_type: perm.type,
-              group: perm.group
-            })));
-          });
+          this.addRepositoryPermissions(
+            member,
+            reposToProcess,
+            reposWithProjects,
+            repositoryPermissions,
+            projectPermissions,
+            workspaceData
+          );
 
           workspaceResults.push({ member, workspaceData });
         });
