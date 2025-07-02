@@ -145,6 +145,50 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             position: relative;
             padding-right: 25px;
           }
+          .workspace-badge-settings {
+            display: inline-flex;
+            align-items: stretch;
+            margin: 2px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 4px;
+            overflow: hidden;
+            white-space: nowrap;
+            background: none;
+            padding: 0;
+          }
+          .workspace-badge-settings:hover .workspace-name-part {
+            background: #0047b3;
+          }
+          .workspace-badge-settings:hover .bitbucket-logo-part {
+            background: #003d99;
+          }
+          .workspace-name-part {
+            background: #0052cc;
+            color: white;
+            padding: 3px 6px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            display: flex;
+            align-items: center;
+          }
+          .bitbucket-logo-part {
+            background: #0047b3;
+            color: white;
+            padding: 3px 6px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            margin-left: -1px;
+            display: flex;
+            align-items: center;
+          }
+          .bitbucket-logo-part svg{
+  width:16px;               /* pick the size you like */
+  height:16px;
+  fill:currentColor;        /* uses the white text colour you already set */
+}
           .workspace-refresh {
             position: absolute;
             top: 4px;
@@ -522,14 +566,14 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
               /* At 850px: 6px + 0 = 6px (smaller padding) */
             }
             
-            .workspace-badge, .project-badge, .repo-badge, .direct-badge, .person-badge {
+            .workspace-badge, .workspace-badge-settings, .project-badge, .repo-badge, .direct-badge, .person-badge {
               font-size: calc(0.65rem + (100vw - 850px) * 0.000978);
               /* At 1080px: 0.65rem + 230 * 0.000978 ≈ 0.875rem (normal) */
               /* At 850px: 0.65rem (smaller) */
               margin: calc(1px + (100vw - 850px) * 0.00435);
             }
             
-            .workspace-badge span, .project-badge span, .repo-badge span, .direct-badge span, .person-badge span {
+            .workspace-badge span, .workspace-badge-settings span, .project-badge span, .repo-badge span, .direct-badge span, .person-badge span {
               padding: calc(2px + (100vw - 850px) * 0.01739);
               /* At 1080px: 2px + 230 * 0.01739 ≈ 6px (normal) */
               /* At 850px: 2px (smaller) */
@@ -614,7 +658,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
               white-space: normal;
             }
             
-            .workspace-badge, .project-badge, .repo-badge, .direct-badge, .person-badge {
+            .workspace-badge, .workspace-badge-settings, .project-badge, .repo-badge, .direct-badge, .person-badge {
               font-size: 0.5rem;
               margin: 1px 0;
               display: inline-flex; /* Use flexbox to keep parts together */
@@ -622,7 +666,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
               white-space: nowrap; /* Keep badge parts together */
             }
             
-            .workspace-badge span, .project-badge span, .repo-badge span, .direct-badge span, .person-badge span {
+            .workspace-badge span, .workspace-badge-settings span, .project-badge span, .repo-badge span, .direct-badge span, .person-badge span {
               padding: 1px 2px;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -999,7 +1043,14 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                   <tbody>
                     \${rowsWithSpans.map((row) => \`
                       <tr class="\${row['workspaceStripe']}">
-                        \${row['showWorkspace'] ? \`<td rowspan="\${row['workspaceSpan']}" class="workspace-name">\${row['workspace']}<button class="workspace-refresh" onclick="refreshWorkspace('\${row['workspaceSlug']}')" title="Refresh workspace data">↻</button></td>\` : ''}
+                        \${row['showWorkspace'] ? \`<td rowspan="\${row['workspaceSpan']}" class="workspace-name">
+                          <span class="workspace-badge-settings"><span class="workspace-name-part">\${row['workspace']}</span><a href="https://bitbucket.org/\${row['workspaceSlug']}/workspace/settings/user-directory" target="_blank" class="bitbucket-logo-part" title="Open workspace settings">
+                            <svg class="bitbucket-logo" viewBox="0 0 24 24">
+                              <path d="M.778 1.213a.768.768 0 00-.768.892l3.263 19.81c.084.5.515.868 1.022.873H19.26a.772.772 0 00.77-.646l3.27-20.03a.772.772 0 00-.768-.892zM14.52 15.53H9.522L8.17 8.466h7.561z"/>
+                            </svg>
+                          </a></span>
+                          <button class="workspace-refresh" onclick="refreshWorkspace('\${row['workspaceSlug']}')" title="Refresh workspace data">↻</button>
+                        </td>\` : ''}
                         \${row['showPerson'] ? \`<td rowspan="\${row['personSpan']}"><div class="person-badge"><span class="person-name-part">\${row['person']}</span><span class="person-remove-x" data-remove-target="\${btoa(JSON.stringify(row['removeTarget']))}" data-user-uuid="\${row['personUuid']}" onclick="showRemoveModal('\${row['person']}', '\${row['workspaceSlug']}', 'specific', this)" title="Remove \${row['person']} from this specific access">×</span></div></td>\` : ''}
                         <td>\${row['access']}</td>
                         <td>\${row['repositories']}</td>
