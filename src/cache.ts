@@ -57,6 +57,11 @@ export class CacheManager {
     stmt.run(key);
   }
 
+  clearAll(): void {
+    const stmt = this.db.prepare('DELETE FROM cache');
+    stmt.run();
+  }
+
 
   // Session management methods
   createSession(sessionId: string, userId: number, expiresAt: number): void {
@@ -67,7 +72,7 @@ export class CacheManager {
   getSession(sessionId: string): { userId: number; expiresAt: number } | null {
     const stmt = this.db.prepare('SELECT userId, expiresAt FROM sessions WHERE sessionId = ?');
     const result = stmt.get(sessionId) as { userId: number; expiresAt: number } | undefined;
-    
+
     if (!result) {
       return null;
     }
@@ -90,3 +95,20 @@ export class CacheManager {
     this.db.close();
   }
 }
+
+// Global cache instance
+let globalCacheManager: CacheManager | null = null;
+
+function getCacheManager(): CacheManager {
+  if (!globalCacheManager) {
+    globalCacheManager = new CacheManager();
+  }
+  return globalCacheManager;
+}
+
+// Standalone function to clear all cache
+export async function clearCache(): Promise<void> {
+  const cacheManager = getCacheManager();
+  cacheManager.clearAll();
+}
+

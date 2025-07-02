@@ -123,6 +123,20 @@ export class PeopleService {
 
       await Promise.all(repoPermissionPromises);
 
+      // Also collect users who have project permissions but might not have repository access
+      for (const [_projectKey, projectPerms] of projectPermissions.entries()) {
+        for (const perm of projectPerms) {
+          const projectUserUuid = perm.user?.uuid?.replace(/[{}]/g, '');
+          if (projectUserUuid && !members.some(m => m.uuid === projectUserUuid) && !directAccessUsers.has(projectUserUuid)) {
+            directAccessUsers.set(projectUserUuid, {
+              uuid: projectUserUuid,
+              display_name: perm.user.display_name,
+              groups: [] // No group membership
+            });
+          }
+        }
+      }
+
       // Now process each member using the cached repository permissions
       members.forEach((member) => {
         const workspaceData = {
@@ -164,6 +178,16 @@ export class PeopleService {
             group: perm.group
           })));
         });
+
+        // Also check for project permissions
+        this.addRepositoryPermissions(
+          directUser,
+          reposToProcess,
+          reposWithProjects,
+          repositoryPermissions,
+          projectPermissions,
+          workspaceData
+        );
 
         if (workspaceData.repositories.length > 0) {
           return { member: directUser, workspaceData };
@@ -273,6 +297,20 @@ export class PeopleService {
 
           await Promise.all(repoPermissionPromises);
 
+          // Also collect users who have project permissions but might not have repository access
+          for (const [_projectKey, projectPerms] of projectPermissions.entries()) {
+            for (const perm of projectPerms) {
+              const projectUserUuid = perm.user?.uuid?.replace(/[{}]/g, '');
+              if (projectUserUuid && !members.some(m => m.uuid === projectUserUuid) && !directAccessUsers.has(projectUserUuid)) {
+                directAccessUsers.set(projectUserUuid, {
+                  uuid: projectUserUuid,
+                  display_name: perm.user.display_name,
+                  groups: [] // No group membership
+                });
+              }
+            }
+          }
+
           // Now process each member using the cached repository permissions
           members.forEach((member) => {
 
@@ -319,6 +357,16 @@ export class PeopleService {
                 group: perm.group
               })));
             });
+
+            // Also check for project permissions
+            this.addRepositoryPermissions(
+              directUser,
+              reposToProcess,
+              reposWithProjects,
+              repositoryPermissions,
+              projectPermissions,
+              workspaceData
+            );
 
             if (workspaceData.repositories.length > 0) {
               return { member: directUser, workspaceData };

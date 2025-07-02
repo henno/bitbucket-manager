@@ -184,11 +184,13 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             display: flex;
             align-items: center;
           }
-          .bitbucket-logo-part svg{
-  width:16px;               /* pick the size you like */
-  height:16px;
-  fill:currentColor;        /* uses the white text colour you already set */
-}
+          .bitbucket-logo-part svg path {
+            fill: #B3D4FF;
+            transition: fill 0.15s;
+          }
+          .bitbucket-logo-part:hover svg path {
+            fill: #fff;
+          }
           .workspace-refresh {
             position: absolute;
             top: 4px;
@@ -743,6 +745,18 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
           </div>
         </div>
 
+        <!-- Cache Clear Confirmation Modal -->
+        <div id="cacheClearModal" class="modal-backdrop hidden">
+          <div class="modal">
+            <h3>Clear All Cache</h3>
+            <p>Are you sure you want to clear all cached workspace data? This will force a fresh reload of all workspace information on the next page load.</p>
+            <div class="modal-buttons">
+              <button class="modal-btn cancel" onclick="hideCacheClearModal()">Cancel</button>
+              <button class="modal-btn remove" onclick="confirmClearAllCache()">Clear Cache</button>
+            </div>
+          </div>
+        </div>
+
         <script>
           // Check authentication status and show appropriate content
           async function checkAuth() {
@@ -1029,12 +1043,18 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
               rowsWithSpans[personStartIndex].personSpan = personSpan;
             }
 
+            // Count workspaces that have people (including those with no access)
+            const workspacesWithPeople = sortedWorkspaces.filter(workspace => workspace.people.length > 0);
+            
             document.getElementById('workspacesData').innerHTML = \`
               <div class="table-container">
                 <table>
                   <thead>
                     <tr>
-                      <th>Workspace</th>
+                      <th>
+                        Workspace
+                        <button class="workspace-refresh" onclick="clearAllCache()" title="Clear all cache data" style="margin-left: 8px;">↻</button>
+                      </th>
                       <th>Person</th>
                       <th>Access</th>
                       <th>Repositories</th>
@@ -1059,7 +1079,7 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                   </tbody>
                 </table>
               </div>
-              <sub>\${sortedWorkspaces.length} workspaces | \${tableRows.length} access entries</sub>
+              <sub>\${workspacesWithPeople.length} workspaces | \${tableRows.length} access entries</sub>
             \`;
           }
 
@@ -1212,6 +1232,57 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
             document.getElementById('removeModal').classList.add('hidden');
           }
 
+          function showCacheClearModal() {
+            document.getElementById('cacheClearModal').classList.remove('hidden');
+          }
+
+          function hideCacheClearModal() {
+            document.getElementById('cacheClearModal').classList.add('hidden');
+          }
+
+          function clearAllCache() {
+            showCacheClearModal();
+          }
+
+          async function confirmClearAllCache() {
+            const sessionId = localStorage.getItem('sessionId');
+            
+            // Update modal to show progress
+            const clearButton = document.querySelector('#cacheClearModal .modal-btn.remove');
+            const originalText = clearButton.textContent;
+            clearButton.textContent = 'Clearing...';
+            clearButton.disabled = true;
+            
+            try {
+              const response = await fetch('/api/cache-status/clear', {
+                method: 'POST',
+                headers: {
+                  'Authorization': 'Bearer ' + sessionId,
+                  'Content-Type': 'application/json'
+                }
+              });
+
+              if (response.ok) {
+                const result = await response.json();
+                showToast(result.message || 'All cache data has been cleared', 'success');
+                hideCacheClearModal();
+                // Reload the page to show fresh data
+                setTimeout(() => location.reload(), 1000);
+              } else {
+                const error = await response.json();
+                showToast(error.error || 'Failed to clear cache', 'error');
+                hideCacheClearModal();
+              }
+            } catch (error) {
+              showToast('Error clearing cache: ' + error.message, 'error');
+              hideCacheClearModal();
+            } finally {
+              // Reset button state
+              clearButton.textContent = originalText;
+              clearButton.disabled = false;
+            }
+          }
+
           async function confirmRemoveUser() {
             if (!currentRemovalUser || !currentRemovalWorkspace) {
               return;
@@ -1310,6 +1381,15 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
               modal.addEventListener('click', (e) => {
                 if (e.target.id === 'removeModal') {
                   hideRemoveModal();
+                }
+              });
+            }
+            
+            const cacheModal = document.getElementById('cacheClearModal');
+            if (cacheModal) {
+              cacheModal.addEventListener('click', (e) => {
+                if (e.target.id === 'cacheClearModal') {
+                  hideCacheClearModal();
                 }
               });
             }
