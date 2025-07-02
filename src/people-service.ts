@@ -5,14 +5,139 @@ import type { PersonData } from './types';
 const HIDE_MYSELF = process.env.HIDE_MYSELF === 'true';
 const HIDE_MYSELF_UUID = process.env.HIDE_MYSELF_UUID || '';
 
-// Log the hide myself settings on module load
-console.log('PeopleService hide settings:', { HIDE_MYSELF, HIDE_MYSELF_UUID });
 
 export class PeopleService {
   public client: BitbucketClient;
 
   constructor(username: string, token: string) {
     this.client = new BitbucketClient(username, token);
+  }
+
+  private async fetchProjectPermissions(
+    workspaceSlug: string,
+    maxAgeMs: number
+  ): Promise<Map<string, any[]>> {
+    const projectPermissions = new Map<string, any[]>();
+    const projects = await this.client.getWorkspaceProjects(workspaceSlug, maxAgeMs);
+
+    for (const project of projects) {
+      if (project.key) {
+        try {
+          const projectUserPerms = await this.client.getProjectUserPermissions(workspaceSlug, project.key, maxAgeMs);
+          projectPermissions.set(project.key, projectUserPerms);
+        } catch (error: unknown) {
+          console.error(`Error getting project permissions for ${project.key}:`, error instanceof Error ? error.message : error);
+        }
+      }
+    }
+    return projectPermissions;
+  }
+
+  private async fetchRepositoryPermissions(
+    workspaceSlug: string,
+    reposToProcess: string[],
+    maxAgeMs: number,
+    members: any[],
+    directAccessUsers: Map<string, any>
+  ): Promise<Map<string, any[]>> {
+    const repositoryPermissions = new Map<string, any[]>();
+    
+    const repoPermissionPromises = reposToProcess.map(async (repo) => {
+      try {
+        const permissions = await this.client.getRepositoryPermissions(
+          workspaceSlug,
+          repo,
+          maxAgeMs
+        );
+        repositoryPermissions.set(repo, permissions);
+
+        // Collect direct access users while we're at it
+        permissions.forEach((perm: any) => {
+          if (perm.user && !members.find((m: any) => m.uuid === perm.user.uuid)) {
+            directAccessUsers.set(perm.user.uuid, perm.user);
+          }
+        });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : 'Unknown error';
+        console.warn(`Failed to get permissions for ${workspaceSlug}/${repo}:`, message);
+        repositoryPermissions.set(repo, []); // Set empty array for failed repos
+      }
+    });
+
+    await Promise.all(repoPermissionPromises);
+    return repositoryPermissions;
+  }
+
+  private collectProjectUsers(
+    projectPermissions: Map<string, any[]>,
+    members: any[],
+    directAccessUsers: Map<string, any>
+  ): void {
+    // Collect users who have project permissions but might not have repository access
+    for (const [_projectKey, projectPerms] of projectPermissions.entries()) {
+      for (const perm of projectPerms) {
+        const projectUserUuid = perm.user?.uuid?.replace(/[{}]/g, '');
+        if (projectUserUuid && !members.some(m => m.uuid === projectUserUuid) && !directAccessUsers.has(projectUserUuid)) {
+          directAccessUsers.set(projectUserUuid, {
+            uuid: projectUserUuid,
+            display_name: perm.user.display_name,
+            groups: [] // No group membership
+          });
+        }
+      }
+    }
+  }
+
+  private processDirectAccessUsers(
+    workspaceSlug: string,
+    directAccessUsers: Map<string, any>,
+    reposToProcess: string[],
+    reposWithProjects: {slug: string, project?: {key: string, name: string}}[],
+    repositoryPermissions: Map<string, any[]>,
+    projectPermissions: Map<string, any[]>,
+    hideMyself: boolean = false
+  ): Promise<({ member: any, workspaceData: any } | null)[]> {
+    const directAccessPromises = Array.from(directAccessUsers.entries()).map(async ([uuid, directUser]) => {
+      // Skip if this is the user to hide (only in getAllPeople)
+      if (hideMyself && HIDE_MYSELF && HIDE_MYSELF_UUID && uuid === HIDE_MYSELF_UUID) {
+        return null;
+      }
+
+      const workspaceData = {
+        workspace: workspaceSlug,
+        groups: [], // No group membership
+        repositories: [] as any[]
+      };
+
+      // Use cached repository permissions instead of fetching again
+      reposToProcess.forEach((repo) => {
+        const permissions = repositoryPermissions.get(repo) || [];
+        const userPermissions = permissions.filter(p => p.user.uuid === uuid && p.type === 'DIRECT');
+        workspaceData.repositories.push(...userPermissions.map(perm => ({
+          repository: repo,
+          permission: perm.permission,
+          access_type: perm.type,
+          group: perm.group
+        })));
+      });
+
+      // Also check for project permissions
+      this.addRepositoryPermissions(
+        directUser,
+        reposToProcess,
+        reposWithProjects,
+        repositoryPermissions,
+        projectPermissions,
+        workspaceData
+      );
+
+      if (workspaceData.repositories.length > 0) {
+        return { member: directUser, workspaceData };
+      }
+      return null;
+    });
+
+    return Promise.all(directAccessPromises);
   }
 
   private addRepositoryPermissions(
@@ -82,60 +207,11 @@ export class PeopleService {
 
       // Use the repositories with project information we already fetched
       const reposToProcess = reposWithProjects.map(r => r.slug);
-      const repositoryPermissions = new Map<string, any[]>();
 
       // Get project-level permissions for all projects
-      const projectPermissions = new Map<string, any[]>(); // projectKey -> user permissions
-      const projects = await this.client.getWorkspaceProjects(workspaceSlug, maxAgeMs);
-
-      for (const project of projects) {
-        if (project.key) {
-          try {
-            const projectUserPerms = await this.client.getProjectUserPermissions(workspaceSlug, project.key, maxAgeMs);
-            projectPermissions.set(project.key, projectUserPerms);
-          } catch (error: unknown) {
-            console.error(`Error getting project permissions for ${project.key}:`, error instanceof Error ? error.message : error);
-          }
-        }
-      }
-
-      const repoPermissionPromises = reposToProcess.map(async (repo) => {
-        try {
-          const permissions = await this.client.getRepositoryPermissions(
-            workspaceSlug,
-            repo,
-            maxAgeMs
-          );
-          repositoryPermissions.set(repo, permissions);
-
-          // Collect direct access users while we're at it
-          permissions.forEach((perm: any) => {
-            if (perm.user && !members.find((m: any) => m.uuid === perm.user.uuid)) {
-              directAccessUsers.set(perm.user.uuid, perm.user);
-            }
-          });
-        } catch (error: unknown) {
-          const message = error instanceof Error ? error.message : 'Unknown error';
-          console.warn(`Failed to get permissions for ${workspaceSlug}/${repo}:`, message);
-          repositoryPermissions.set(repo, []); // Set empty array for failed repos
-        }
-      });
-
-      await Promise.all(repoPermissionPromises);
-
-      // Also collect users who have project permissions but might not have repository access
-      for (const [_projectKey, projectPerms] of projectPermissions.entries()) {
-        for (const perm of projectPerms) {
-          const projectUserUuid = perm.user?.uuid?.replace(/[{}]/g, '');
-          if (projectUserUuid && !members.some(m => m.uuid === projectUserUuid) && !directAccessUsers.has(projectUserUuid)) {
-            directAccessUsers.set(projectUserUuid, {
-              uuid: projectUserUuid,
-              display_name: perm.user.display_name,
-              groups: [] // No group membership
-            });
-          }
-        }
-      }
+      const projectPermissions = await this.fetchProjectPermissions(workspaceSlug, maxAgeMs);
+      const repositoryPermissions = await this.fetchRepositoryPermissions(workspaceSlug, reposToProcess, maxAgeMs, members, directAccessUsers);
+      this.collectProjectUsers(projectPermissions, members, directAccessUsers);
 
       // Now process each member using the cached repository permissions
       members.forEach((member) => {
@@ -159,43 +235,15 @@ export class PeopleService {
       });
 
       // Process direct access users who aren't group members using cached permissions
-      const directAccessPromises = Array.from(directAccessUsers.entries()).map(async ([uuid, directUser]) => {
-
-        const workspaceData = {
-          workspace: workspaceSlug,
-          groups: [], // No group membership
-          repositories: [] as any[]
-        };
-
-        // Use cached repository permissions instead of fetching again
-        reposToProcess.forEach((repo) => {
-          const permissions = repositoryPermissions.get(repo) || [];
-          const userPermissions = permissions.filter(p => p.user.uuid === uuid && p.type === 'DIRECT');
-          workspaceData.repositories.push(...userPermissions.map(perm => ({
-            repository: repo,
-            permission: perm.permission,
-            access_type: perm.type,
-            group: perm.group
-          })));
-        });
-
-        // Also check for project permissions
-        this.addRepositoryPermissions(
-          directUser,
-          reposToProcess,
-          reposWithProjects,
-          repositoryPermissions,
-          projectPermissions,
-          workspaceData
-        );
-
-        if (workspaceData.repositories.length > 0) {
-          return { member: directUser, workspaceData };
-        }
-        return null;
-      });
-
-      const directAccessResults = await Promise.all(directAccessPromises);
+      const directAccessResults = await this.processDirectAccessUsers(
+        workspaceSlug,
+        directAccessUsers,
+        reposToProcess,
+        reposWithProjects,
+        repositoryPermissions,
+        projectPermissions,
+        false // Don't hide myself in single workspace view
+      );
       workspaceResults.push(...directAccessResults.filter(result => result !== null));
 
       // Convert to PersonData format
@@ -251,24 +299,12 @@ export class PeopleService {
 
           // Use the repositories with project information we already fetched
           const reposToProcess = reposWithProjects.map(r => r.slug);
-          const repositoryPermissions = new Map<string, any[]>();
 
           // Get project-level permissions for all projects
-          const projectPermissions = new Map<string, any[]>(); // projectKey -> user permissions
-          const projects = await this.client.getWorkspaceProjects(workspace.slug, maxAgeMs);
-
-          for (const project of projects) {
-            if (project.key) {
-              try {
-                const projectUserPerms = await this.client.getProjectUserPermissions(workspace.slug, project.key, maxAgeMs);
-                projectPermissions.set(project.key, projectUserPerms);
-              } catch (error: unknown) {
-                console.error(`Error getting project permissions for ${project.key}:`, error instanceof Error ? error.message : error);
-              }
-            }
-          }
-
-          // Fetch repository permissions in parallel
+          const projectPermissions = await this.fetchProjectPermissions(workspace.slug, maxAgeMs);
+          
+          // Fetch repository permissions in parallel (modified to handle getAllPeople case)
+          const repositoryPermissions = new Map<string, any[]>();
           const repoPermissionPromises = reposToProcess.map(async (repo) => {
             try {
               const permissions = await this.client.getRepositoryPermissions(
@@ -296,20 +332,7 @@ export class PeopleService {
           });
 
           await Promise.all(repoPermissionPromises);
-
-          // Also collect users who have project permissions but might not have repository access
-          for (const [_projectKey, projectPerms] of projectPermissions.entries()) {
-            for (const perm of projectPerms) {
-              const projectUserUuid = perm.user?.uuid?.replace(/[{}]/g, '');
-              if (projectUserUuid && !members.some(m => m.uuid === projectUserUuid) && !directAccessUsers.has(projectUserUuid)) {
-                directAccessUsers.set(projectUserUuid, {
-                  uuid: projectUserUuid,
-                  display_name: perm.user.display_name,
-                  groups: [] // No group membership
-                });
-              }
-            }
-          }
+          this.collectProjectUsers(projectPermissions, members, directAccessUsers);
 
           // Now process each member using the cached repository permissions
           members.forEach((member) => {
@@ -334,47 +357,15 @@ export class PeopleService {
           });
 
           // Process direct access users who aren't group members using cached permissions
-          const directAccessPromises = Array.from(directAccessUsers.entries()).map(async ([uuid, directUser]) => {
-            // Skip if this is the user to hide
-            if (HIDE_MYSELF && HIDE_MYSELF_UUID && uuid === HIDE_MYSELF_UUID) {
-              return null;
-            }
-
-            const workspaceData = {
-              workspace: workspace.slug,
-              groups: [], // No group membership
-              repositories: [] as any[]
-            };
-
-            // Use cached repository permissions instead of fetching again
-            reposToProcess.forEach((repo) => {
-              const permissions = repositoryPermissions.get(repo) || [];
-              const userPermissions = permissions.filter(p => p.user.uuid === uuid && p.type === 'DIRECT');
-              workspaceData.repositories.push(...userPermissions.map(perm => ({
-                repository: repo,
-                permission: perm.permission,
-                access_type: perm.type,
-                group: perm.group
-              })));
-            });
-
-            // Also check for project permissions
-            this.addRepositoryPermissions(
-              directUser,
-              reposToProcess,
-              reposWithProjects,
-              repositoryPermissions,
-              projectPermissions,
-              workspaceData
-            );
-
-            if (workspaceData.repositories.length > 0) {
-              return { member: directUser, workspaceData };
-            }
-            return null;
-          });
-
-          const directAccessResults = await Promise.all(directAccessPromises);
+          const directAccessResults = await this.processDirectAccessUsers(
+            workspace.slug,
+            directAccessUsers,
+            reposToProcess,
+            reposWithProjects,
+            repositoryPermissions,
+            projectPermissions,
+            true // Hide myself in all people view
+          );
           workspaceResults.push(...directAccessResults.filter(result => result !== null));
 
           return workspaceResults;

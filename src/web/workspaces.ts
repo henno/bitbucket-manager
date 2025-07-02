@@ -779,11 +779,26 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
                 showMainContent();
                 await loadWorkspacesData();
                 return true;
-              } else {
+              } else if (response.status === 401) {
                 // Session invalid, remove it
                 localStorage.removeItem('sessionId');
                 showLoginForm();
                 return false;
+              } else {
+                // Check if this is a server configuration error (500)
+                const data = await response.json();
+                if (response.status === 500 && data.error && data.error.includes('Server configuration error')) {
+                  // Show the configuration error on the login form
+                  showLoginForm();
+                  document.getElementById('loginError').textContent = data.error;
+                  document.getElementById('loginError').classList.remove('hidden');
+                  return false;
+                } else {
+                  // Session invalid, remove it
+                  localStorage.removeItem('sessionId');
+                  showLoginForm();
+                  return false;
+                }
               }
             } catch (error) {
               console.error('Auth check failed:', error);
@@ -844,9 +859,14 @@ export function createWorkspacesRoute(_peopleService: PeopleService) {
 
               if (response.ok) {
                 displayWorkspacesData(data.data);
+              } else if (response.status === 401) {
+                // Session invalid - log out user
+                localStorage.removeItem('sessionId');
+                showLoginForm();
               } else {
+                // Show error message in the main content area
                 document.getElementById('workspacesData').innerHTML = 
-                  '<div class="error">Error loading workspaces data: ' + (data.error || 'Failed to load workspace data') + '</div>';
+                  '<div class="error">' + (data.error || 'Failed to load workspace data') + '</div>';
               }
             } catch (error) {
               document.getElementById('workspacesData').innerHTML = 

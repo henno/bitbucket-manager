@@ -9,17 +9,9 @@ const username = process.env.BITBUCKET_USER;
 const token = process.env.BITBUCKET_TOKEN;
 const port = parseInt(process.env.PORT || '3000');
 
-console.log('Environment check:', {
-  BITBUCKET_USER: !!username,
-  BITBUCKET_TOKEN: !!token,
-  APP_USER: !!process.env.APP_USER,
-  APP_PASS: !!process.env.APP_PASS,
-  HIDE_MYSELF: process.env.HIDE_MYSELF,
-  HIDE_MYSELF_UUID: process.env.HIDE_MYSELF_UUID
-});
 
 if (!username || !token) {
-  console.error('ERROR: BITBUCKET_USER and BITBUCKET_TOKEN must be set in environment');
+  console.error('ERROR: Project has not been set up. Run `bun setup`');
   process.exit(1);
 }
 

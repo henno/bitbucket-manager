@@ -34,10 +34,19 @@ export class BitbucketClient {
     if (cached) {
       // Check if this is a cached error
       if (cached && typeof cached === 'object' && 'error' in cached) {
-        throw new Error(cached.error as string);
+        const errorMsg = cached.error as string;
+        // If this is a cached 401 error, clear it and proceed with fresh request
+        if (errorMsg.includes('HTTP 401: Unauthorized')) {
+          console.log(`🗑️ Clearing cached 401 error for: ${url}`);
+          this.cache.delete(cacheKey);
+          // Don't return cached error, proceed to make fresh request
+        } else {
+          throw new Error(errorMsg);
+        }
+      } else {
+        // console.log(`⚡ USING CACHE (${Math.round(maxAgeMs/1000)}s): ${url}`);
+        return cached;
       }
-      // console.log(`⚡ USING CACHE (${Math.round(maxAgeMs/1000)}s): ${url}`);
-      return cached;
     }
 
     // Check if request is already in progress
@@ -69,11 +78,18 @@ export class BitbucketClient {
       });
 
       if (!response.ok) {
-        console.log(`❌ FAILED: ${response.status} ${url}`);
         const error = `HTTP ${response.status}: ${response.statusText} for ${url}`;
         
-        // Cache 404s and other client errors to avoid retrying
-        if (response.status >= 400 && response.status < 500) {
+        // Log 401s more quietly since they're expected when credentials are wrong
+        if (response.status === 401) {
+          console.log(`🔒 Authentication failed: ${url}`);
+        } else {
+          console.log(`❌ FAILED: ${response.status} ${url}`);
+        }
+        
+        // Cache 404s and other client errors to avoid retrying, but not 401s
+        // 401s should not be cached as they might be resolved with new credentials
+        if (response.status >= 400 && response.status < 500 && response.status !== 401) {
           await this.cache.set(cacheKey, { error });
         }
         
@@ -87,7 +103,10 @@ export class BitbucketClient {
       
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : 'Unknown error';
-      console.log(`💥 ERROR: ${url} - ${message}`);
+      // Don't log 401 errors here since they're already logged above
+      if (!message.includes('HTTP 401:')) {
+        console.log(`💥 ERROR: ${url} - ${message}`);
+      }
       throw error;
     }
   }

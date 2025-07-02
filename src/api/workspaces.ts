@@ -9,9 +9,9 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
     try {
       const maxAge = c.req.query('maxAge');
       const maxAgeMs = maxAge ? parseInt(maxAge) * 1000 : 60 * 60 * 1000;
-      
+
       const workspaces = await peopleService.client.getWorkspacesWithAdminAccess(maxAgeMs);
-      
+
       return c.json({
         success: true,
         count: workspaces.length,
@@ -22,10 +22,26 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
         }))
       });
     } catch (error: unknown) {
-      console.error('Error fetching workspaces:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      // Log 401 errors more quietly since they indicate config issues, not code bugs
+      if (errorMessage.includes('HTTP 401:')) {
+        console.log('ERROR: Bitbucket authentication failed - check BITBUCKET_USER and BITBUCKET_TOKEN');
+      } else {
+        console.error('Error fetching workspaces:', error);
+      }
+
+      // Check if this is a Bitbucket authentication error
+      if (errorMessage.includes('HTTP 401: Unauthorized')) {
+        // Server misconfiguration - return 500 with helpful message
+        return c.json({
+          success: false,
+          error: 'Server configuration error: Bitbucket credentials are invalid. Please contact the administrator.'
+        }, 500);
+      }
+
       return c.json({
         success: false,
-        error: error instanceof Error ? error.message : 'Unknown error'
+        error: errorMessage
       }, 500);
     }
   });
@@ -35,17 +51,17 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
       const maxAge = c.req.query('maxAge');
       const workspace = c.req.query('workspace'); // Optional: specific workspace to refresh
       const maxAgeMs = maxAge ? parseInt(maxAge) * 1000 : 60 * 60 * 1000;
-      
+
       console.log(`API: /workspaces/people - maxAge: ${maxAge || 'default(3600)'}s, workspace: ${workspace || 'all'}`);
-      
+
       const workspaces = await peopleService.client.getWorkspacesWithAdminAccess(maxAgeMs);
       const workspaceData = new Map();
-      
+
       // Initialize workspace data
       for (const ws of workspaces) {
         // If specific workspace requested, only process that one
         if (workspace && ws.slug !== workspace) continue;
-        
+
         workspaceData.set(ws.slug, {
           slug: ws.slug,
           name: ws.name,
@@ -53,13 +69,13 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
           people: []
         });
       }
-      
+
       let people;
-      
+
       if (workspace) {
         // Get people data for specific workspace only
         people = await peopleService.getWorkspacePeople(workspace, maxAgeMs);
-        
+
         // Organize people by workspace (should only be the requested workspace)
         people.forEach(person => {
           person.workspaces.forEach(ws => {
@@ -77,7 +93,7 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
       } else {
         // Get people data for all workspaces
         people = await peopleService.getAllPeople(maxAgeMs, true);
-        
+
         // Organize people by workspace
         people.forEach(person => {
           person.workspaces.forEach(ws => {
@@ -93,10 +109,10 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
           });
         });
       }
-      
+
       const result = Array.from(workspaceData.values())
         .sort((a, b) => a.name.localeCompare(b.name));
-      
+
       return c.json({
         success: true,
         count: result.length,
@@ -104,10 +120,26 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
         refreshedWorkspace: workspace || null
       });
     } catch (error: unknown) {
-      console.error('Error fetching workspace people:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      // Log 401 errors more quietly since they indicate config issues, not code bugs
+      if (errorMessage.includes('HTTP 401:')) {
+        console.log('Bitbucket authentication failed - check BITBUCKET_USER and BITBUCKET_TOKEN');
+      } else {
+        console.error('Error fetching workspace people:', error);
+      }
+
+      // Check if this is a Bitbucket authentication error
+      if (errorMessage.includes('HTTP 401: Unauthorized')) {
+        // Server misconfiguration - return 500 with helpful message
+        return c.json({
+          success: false,
+          error: 'Server configuration error: Bitbucket credentials are invalid. Please contact the administrator.'
+        }, 500);
+      }
+
       return c.json({
         success: false,
-        error: error instanceof Error ? error.message : 'Unknown error'
+        error: errorMessage
       }, 500);
     }
   });
@@ -127,14 +159,14 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
       // Use UUID if provided for faster, more robust removal
       const userIdentifier = removeTargets.userUuid || userName;
       const isUuid = !!removeTargets.userUuid;
-      
+
       if (isUuid) {
         console.log(`Using provided UUID for faster removal: ${userIdentifier}`);
       }
 
       const result = await peopleService.client.removeUserFromSpecificResources(
-        workspaceSlug, 
-        userIdentifier, 
+        workspaceSlug,
+        userIdentifier,
         removeTargets,
         isUuid
       );
@@ -142,10 +174,10 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
       // Selectively invalidate cache based on what was actually removed
       if (result.removedFrom.length > 0) {
         console.log(`Selectively invalidating cache for workspace ${workspaceSlug} after user removal`);
-        
+
         // Extract specific resources that were modified from the removal result
         const cacheTargets: { groups?: string[], repositories?: string[], projects?: string[] } = {};
-        
+
         result.removedFrom.forEach(removal => {
           if (removal.startsWith('group:')) {
             const groupSlug = removal.replace('group:', '');
@@ -161,7 +193,7 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
             cacheTargets.projects.push(projectKey);
           }
         });
-        
+
         // Use selective cache invalidation if we have specific targets, otherwise invalidate all
         if (Object.keys(cacheTargets).length > 0) {
           await peopleService.client.invalidateWorkspaceCache(workspaceSlug, cacheTargets);
@@ -172,7 +204,7 @@ export function createWorkspacesRoute(peopleService: PeopleService) {
 
       if (result.errors.length > 0) {
         console.warn('User removal completed with some errors:', result.errors);
-        
+
         if (result.removedFrom.length > 0) {
           return c.json({
             success: true,
